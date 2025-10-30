@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 
-    <link href="{{asset('build/assets/app-Cn8k3xrs.css')}}" rel="stylesheet">
+    <link href="{{asset('build/assets/app-Dysi2LRN.css')}}" rel="stylesheet">
 </head>
 <body>
 
@@ -20,9 +20,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 hero-text">
-                    <h1>Paket Wisata Jogja Terlengkap</h1>
-                    <p>Buat Momen Liburan Berkesan Bersama LIRA Tour</p>
-                    <a href="#" class="btn-hero">BOOK NOW!</a>
+                    <h1>Partner Tepat untuk Konstruksi Hebat</h1>
+                    <p>KSPPrecast adalah Spesialis beton precast berkualitas tinggi dengan harga terjangkau.</p>
+                    <a href="#" class="btn-hero">Diskusi Sekarang</a>
                 </div>
             </div>
         </div>
@@ -32,169 +32,87 @@
     <section id="about" class="about-section py-5">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Tentang LiraTour</h2>
+                <h2 class="fw-bold text-primary">Tentang KSPPrecast</h2>
             </div>
-            <div class="row align-items-center gy-4">
+            <div class="row gy-4">
                 {{-- Gambar kiri --}}
                 <div class="col-md-6" data-aos="fade-right">
-                    <img src="{{ asset('assets/web/img/about.jpg') }}" alt="Tentang Lira Tour" class="img-fluid rounded-4 shadow-lg">
+                    <img src="{{ asset('assets/web/img/about.jpg') }}" alt="Tentang KSPPrecast" class="img-fluid rounded-4 shadow-lg">
                 </div>
 
                 {{-- Deskripsi kanan --}}
                 <div class="col-md-6" data-aos="fade-left">
                     <p class="lead text-muted">
-                        Lira Tour adalah penyedia layanan wisata Jogja terpercaya yang siap membantu Anda menikmati liburan berkesan.
-                        Kami menawarkan paket wisata, sewa kendaraan, serta layanan gathering dan honeymoon dengan pelayanan profesional.
+                        KSPPrecast adalah solusi terdepan Anda dalam penyediaan material konstruksi beton pracetak berkualitas tinggi. Kami berkomitmen untuk merevolusi pembangunan dengan menawarkan produk precast yang diproduksi secara presisi di lingkungan pabrik terkontrol, menjamin mutu yang konsisten untuk setiap proyek Anda.
+                        <br><br>
+                        Dengan menggunakan teknologi beton pracetak, kami membantu mempercepat jadwal konstruksi secara signifikan, mengurangi biaya operasional di lapangan, dan memastikan kekuatan struktural yang unggul. Kami siap menjadi mitra andal dalam mewujudkan pembangunan infrastruktur dan gedung yang efisien dan tahan lama.
                     </p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Paket wisata lengkap dan fleksibel</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Driver & guide profesional</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Harga bersahabat dan transparan</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Kualitas beton yang terjamin dan konsisten</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Pemasangan lebih cepat dan efisien waktu</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Beragam produk struktural precast (balok, kolom, panel, dll.)</li>
                     </ul>
-                    <a href="#" class="btn btn-about mt-4">Pelajari Lebih Lanjut</a>
+                    <a href="#" class="btn btn-about mt-4">Lihat Produk Kami</a>
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="why-us" class="py-5 why-us-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-white">Kenapa memilih kami?</h2>
-                <p class="text-white">Kami menghadirkan perpaduan sempurna antara petualangan autentik dan ketenangan pikiran. Dengan pemandu lokal yang penuh passion, kami membawa Anda menjelajahi keindahan tersembunyi dan menciptakan cerita personal yang tak terlupakan.</p>
+                <h2 class="fw-bold text-white">Kenapa Memilih KSPPrecast?</h2>
+                <p class="text-white">Kami bukan sekadar penyedia material, tetapi mitra konstruksi yang menjamin proyek Anda dibangun dengan mutu, kecepatan, dan efisiensi yang optimal. Pilih keandalan, pilih KSPPrecast.</p>
             </div>
 
             <div class="row g-4">
-                {{-- Card 1 --}}
+                {{-- Card 1: Kualitas Terjamin (Quality) --}}
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-stars text-primary fs-1"></i>
+                            <i class="bi bi-gear-wide-connected text-primary fs-1"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">Pelayanan Profesional</h5>
+                        <h5 class="fw-bold mb-2">Mutu Pabrik Terkontrol</h5>
                         <p class="text-muted">
-                            Tim kami berpengalaman dalam memberikan layanan wisata yang ramah, informatif, dan profesional.
+                            Produksi dilakukan di lingkungan pabrik yang terkontrol ketat, menjamin komposisi dan kekuatan beton yang homogen dan konsisten, jauh melampaui cor di tempat (cast in situ).
                         </p>
                     </div>
                 </div>
 
-                {{-- Card 2 --}}
+                {{-- Card 2: Kecepatan dan Efisiensi (Speed & Efficiency) --}}
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-geo-alt-fill text-primary fs-1"></i>
+                            <i class="bi bi-clock-fill text-primary fs-1"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">Destinasi Terbaik</h5>
+                        <h5 class="fw-bold mb-2">Konstruksi Lebih Cepat</h5>
                         <p class="text-muted">
-                            Kami menghadirkan berbagai pilihan destinasi wisata menarik dan populer di Yogyakarta dan sekitarnya.
+                            Elemen pracetak siap pasang mengurangi waktu konstruksi di lapangan hingga 50%. Menghemat waktu, mengurangi keterlambatan, dan mempercepat *return on investment* (ROI).
                         </p>
                     </div>
                 </div>
 
-                {{-- Card 3 --}}
+                {{-- Card 3: Keandalan Struktural (Reliability) --}}
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-currency-exchange text-primary fs-1"></i>
+                            <i class="bi bi-house-door-fill text-primary fs-1"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">Harga Bersahabat</h5>
+                        <h5 class="fw-bold mb-2">Sistem Bangunan Terintegrasi</h5>
                         <p class="text-muted">
-                            Dapatkan pengalaman liburan berkualitas tanpa perlu khawatir soal biaya, dengan harga jujur dan transparan.
+                            Kami menyediakan solusi precast yang terintegrasi, memastikan kompatibilitas antar komponen struktural, menghasilkan bangunan yang kokoh, presisi, dan tahan lama.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    {{-- Paket Wisata Section --}}
-    <section id="paket-wisata" class="py-5 paket-section bg-light">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Paket Wisata Populer</h2>
-                <p class="text-muted">Rangkaian Perjalanan yang Diciptakan untuk Kenangan Terindahmu
-Jelajahi pilihan paket terbaik Lira Tour, dirancang untuk membawamu ke momen-momen menakjubkan.</p>
-            </div>
-
-            <div class="row g-4">
-                {{-- Paket 1 --}}
-                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-card">
-                        <img src="{{ asset('assets/web/img/about.jpg') }}" class="card-img-top" alt="Paket Wisata 1">
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold mb-2 text-primary">Paket Wisata 1 Hari Jogja</h5>
-                            <p class="text-muted mb-3">Kunjungi destinasi populer seperti Candi Prambanan, Tebing Breksi, dan Malioboro dalam 1 hari penuh.</p>
-                            <p class="fw-semibold text-dark mb-3">Mulai dari <span class="text-primary">Rp 350.000/orang</span></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20booking%20Paket%20Wisata%201%20Hari%20Jogja."
-                            target="_blank" class="btn btn-primary rounded-pill px-4">
-                                <i class="bi bi-whatsapp me-2"></i>Book Now
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Paket 2 --}}
-                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-card">
-                        <img src="{{ asset('assets/web/img/about.jpg') }}" class="card-img-top" alt="Paket Wisata 2">
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold mb-2 text-primary">Paket 3 Hari 2 Malam</h5>
-                            <p class="text-muted mb-3">Nikmati liburan santai di Jogja dengan kunjungan ke Pantai Parangtritis, Hutan Pinus, dan wisata kuliner malam.</p>
-                            <p class="fw-semibold text-dark mb-3">Mulai dari <span class="text-primary">Rp 950.000/orang</span></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20booking%20Paket%203%20Hari%202%20Malam."
-                            target="_blank" class="btn btn-primary rounded-pill px-4">
-                                <i class="bi bi-whatsapp me-2"></i>Book Now
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Tambahkan paket lain --}}
-                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-card">
-                        <img src="{{ asset('assets/web/img/about.jpg') }}" class="card-img-top" alt="Paket Wisata 3">
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold mb-2 text-primary">Paket Honeymoon Jogja</h5>
-                            <p class="text-muted mb-3">Rasakan momen romantis bersama pasangan dengan destinasi eksklusif dan fasilitas istimewa.</p>
-                            <p class="fw-semibold text-dark mb-3">Mulai dari <span class="text-primary">Rp 1.250.000/pasangan</span></p>
-                            <a href="#" target="_blank" class="btn btn-primary rounded-pill px-4">
-                                <i class="bi bi-whatsapp me-2"></i>Book Now
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Paket 4 --}}
-                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-card">
-                        <img src="{{ asset('assets/web/img/about.jpg') }}" class="card-img-top" alt="Paket Wisata 4">
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold mb-2 text-primary">Paket 2 Hari 1 Malam</h5>
-                            <p class="text-muted mb-3">Cocok untuk liburan singkat dengan kunjungan ke landmark populer dan wisata kuliner.</p>
-                            <p class="fw-semibold text-dark mb-3">Mulai dari <span class="text-primary">Rp 650.000/orang</span></p>
-                            <a href="#" target="_blank" class="btn btn-primary rounded-pill px-4">
-                                <i class="bi bi-whatsapp me-2"></i>Book Now
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Tambahkan lebih banyak card, nanti otomatis jadi baris kedua --}}
-            </div>
-        </div>
-    </section>
-
 
     {{-- Sewa Mobil & Bus Section --}}
     <section id="sewa-mobil" class="py-5 sewa-section bg-white">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Sewa Mobil & Bus</h2>
+                <h2 class="fw-bold text-primary">Produk Unggulan KSPPrecast</h2>
                 <p class="text-muted">Nikmati perjalanan nyaman dengan armada terbaik dari Lira Tour</p>
             </div>
 
@@ -203,100 +121,62 @@ Jelajahi pilihan paket terbaik Lira Tour, dirancang untuk membawamu ke momen-mom
                 <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('assets/web/img/1.webp') }}" class="card-img-top" alt="Grand New Avanza">
-                            <span class="seat-badge">6 Seat</span>
+                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
                         </div>
                         <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">Grand New Avanza</h5>
+                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
                             <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <p class="text-success fw-semibold">Rp. 650.000 <small class="text-muted">/ Fullday</small></p>
-                            <p class="text-muted small mb-3">
-                                <i class="bi bi-person-badge me-1"></i>Driver &nbsp;
-                                <i class="bi bi-fuel-pump me-1"></i>BBM &nbsp;
-                                <i class="bi bi-snow me-1"></i>AC &nbsp;
-                                <i class="bi bi-music-note-beamed me-1"></i>Audio
-                            </p>
                             <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
                             target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Booking Now
+                                <i class="bi bi-whatsapp me-2"></i>Beli
                             </a>
                             <a href="">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
-
-                {{-- Mobil 2 --}}
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('assets/web/img/2.webp') }}" class="card-img-top" alt="Avanza FWD">
-                            <span class="seat-badge">6 Seat</span>
+                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
                         </div>
                         <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">Avanza FWD</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 650.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <p class="text-success fw-semibold">Rp. 750.000 <small class="text-muted">/ Fullday</small></p>
-                            <p class="text-muted small mb-3">
-                                <i class="bi bi-person-badge me-1"></i>Driver &nbsp;
-                                <i class="bi bi-fuel-pump me-1"></i>BBM &nbsp;
-                                <i class="bi bi-snow me-1"></i>AC &nbsp;
-                                <i class="bi bi-music-note-beamed me-1"></i>Audio
-                            </p>
+                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
+                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
                             <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
                             target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Booking Now
+                                <i class="bi bi-whatsapp me-2"></i>Beli
                             </a>
                             <a href="">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
-
-                {{-- Mobil 3 --}}
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('assets/web/img/3.webp') }}" class="card-img-top" alt="Innova Reborn">
-                            <span class="seat-badge">6 Seat</span>
+                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
                         </div>
                         <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">Innova Reborn</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 750.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <p class="text-success fw-semibold">Rp. 900.000 <small class="text-muted">/ Fullday</small></p>
-                            <p class="text-muted small mb-3">
-                                <i class="bi bi-person-badge me-1"></i>Driver &nbsp;
-                                <i class="bi bi-fuel-pump me-1"></i>BBM &nbsp;
-                                <i class="bi bi-snow me-1"></i>AC &nbsp;
-                                <i class="bi bi-music-note-beamed me-1"></i>Audio
-                            </p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Innova%20Reborn."
+                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
+                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
                             target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Booking Now
+                                <i class="bi bi-whatsapp me-2"></i>Beli
                             </a>
                             <a href="">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
-
-                {{-- Mobil 4 --}}
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('assets/web/img/4.webp') }}" class="card-img-top" alt="Hiace Commuter">
-                            <span class="seat-badge">12 Seat</span>
+                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
                         </div>
                         <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">Hiace Commuter</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 1.200.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <p class="text-success fw-semibold">Rp. 1.400.000 <small class="text-muted">/ Fullday</small></p>
-                            <p class="text-muted small mb-3">
-                                <i class="bi bi-person-badge me-1"></i>Driver &nbsp;
-                                <i class="bi bi-fuel-pump me-1"></i>BBM &nbsp;
-                                <i class="bi bi-snow me-1"></i>AC &nbsp;
-                                <i class="bi bi-music-note-beamed me-1"></i>Audio
-                            </p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Hiace%20Commuter."
+                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
+                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
                             target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Booking Now
+                                <i class="bi bi-whatsapp me-2"></i>Beli
                             </a>
                             <a href="">Lihat Detail</a>
                         </div>
@@ -306,76 +186,6 @@ Jelajahi pilihan paket terbaik Lira Tour, dirancang untuk membawamu ke momen-mom
         </div>
     </section>
 
-
-    {{-- Testimoni Section --}}
-    <section id="testimoni" class="py-5 bg-gradient-testimoni">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-white">Apa Kata Mereka Tentang Zaza Tour Jogja?</h2>
-                <p class="text-white">
-                    Ratusan pelanggan puas telah merasakan serunya liburan bersama Zaza Tour.
-                    Simak cerita dan pengalaman mereka selama menjelajahi Jogja bersama kami!
-                </p>
-            </div>
-
-            <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                <!-- Testimoni 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg p-4 h-100 rounded-4 text-center card-testimoni">
-                        <img src="{{ asset('assets/web/img/rahmat.jpeg') }}" class="rounded-circle mx-auto mb-3" width="70" height="70" alt="User 1">
-                        <p class="text-muted mb-3">
-                            “Pelayanan bagus, sopir ramah, mobil bersih, dan jadwal sesuai.
-                            Terima kasih Zaza Tour, liburan kami sangat menyenangkan!”
-                        </p>
-                        <div class="text-warning mb-2">
-                            @for ($i = 0; $i < 5; $i++)
-                                <i class="bi bi-star-fill"></i>
-                            @endfor
-
-                        </div>
-                        <h6 class="fw-bold mb-0 text-primary">Rizky Saputra</h6>
-                        <small class="text-muted">Jakarta</small>
-                    </div>
-                </div>
-
-                <!-- Testimoni 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg p-4 h-100 rounded-4 text-center card-testimoni">
-                        <img src="{{ asset('assets/web/img/lintang.jpeg') }}" class="rounded-circle mx-auto mb-3" width="70" height="70" alt="User 2">
-                        <p class="text-muted mb-3">
-                            “Baru kali ini dapat biro wisata yang jadwalnya realistis dan pelayanan cepat.
-                            Eksekusinya on time dan profesional banget!”
-                        </p>
-                        <div class="text-warning mb-2">
-                            @for ($i = 0; $i < 5; $i++)
-                                <i class="bi bi-star-fill"></i>
-                            @endfor
-                        </div>
-                        <h6 class="fw-bold mb-0 text-primary">Nadia Permata</h6>
-                        <small class="text-muted">Surabaya</small>
-                    </div>
-                </div>
-
-                <!-- Testimoni 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-lg p-4 h-100 rounded-4 text-center card-testimoni">
-                        <img src="{{ asset('assets/web/img/user3.jpg') }}" class="rounded-circle mx-auto mb-3" width="70" height="70" alt="User 3">
-                        <p class="text-muted mb-3">
-                            “Pengalaman booking sangat mudah, stafnya ramah dan sigap.
-                            Armada lengkap dari city car sampai bus VIP. Recommended!”
-                        </p>
-                        <div class="text-warning mb-2">
-                            @for ($i = 0; $i < 5; $i++)
-                                <i class="bi bi-star-fill"></i>
-                            @endfor
-                        </div>
-                        <h6 class="fw-bold mb-0 text-primary">Andi Prakoso</h6>
-                        <small class="text-muted">Yogyakarta</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     @include('web.components.banner')
 
