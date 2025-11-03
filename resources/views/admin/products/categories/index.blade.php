@@ -74,7 +74,7 @@
                             <h5 class="card-title">
                                 Manage <span>| Category</span>
                             </h5>
-                            <a class="btn btn-sm btn-primary" href="">Add</a>
+                            <a class="btn btn-sm btn-primary" href="{{route('categories.create')}}">Add</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-middle">
@@ -82,6 +82,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
+                                        <th scope="col">Description</th>
                                         <th scope="col">Image</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -91,9 +92,9 @@
                                     <tr>
                                         <td>{{$index + 1}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td>{{$category->image}}</td>
+                                        <td>{!!$category->description!!}</td>
                                         <td>
-                                            @if($project->cover_image)
+                                            @if($category->image)
                                                 <img src="{{ asset('storage/' . $category->image) }}"
                                                     alt="{{ $category->name }}"
                                                     style="width: 80px; height: 60px; object-fit: cover; border-radius: 5px;">
@@ -102,10 +103,10 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
+                                            <a href="{{route('categories.edit', $category->slug)}}" class="btn btn-sm btn-info">
+                                                <i class="bi bi-pen"></i>
                                             </a>
-                                            <form action="" method="POST" style="display:inline;">
+                                            <form action="{{route('categories.destroy', $category->slug)}}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this service?')">

@@ -11,10 +11,9 @@
                     </p>
                     <h6 class="mt-4">Ikuti Sosial Media Kami</h6>
                     <div class="d-flex gap-3 mt-2">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                        @foreach($medsos as $media)
+                        <a href="{{$media->url}}" aria-label="Kunjungi Media Sosial Kami" class="social-link"><i class="bi {{$media->icon}}"></i></a>
+                        @endforeach
                     </div>
                 </div>
 
@@ -22,27 +21,25 @@
                 <div class="col-md-4">
                     <h5 class="fw-bold mb-3">Produk & Solusi</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Panel Dinding Pracetak</a></li>
-                        <li><a href="#">Balok & Kolom Precast</a></li>
-                        <li><a href="#">Pelat Lantai (Hollow Core Slab)</a></li>
-                        <li><a href="#">Tiang Pancang (Piles)</a></li>
-                        <li><a href="#">Infrastruktur Jalan & Drainase</a></li>
+                        @foreach($productCat as $category)
+                        <li><a href="#">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
 
                 {{-- Kolom 3: Kontak Kami --}}
                 <div class="col-md-4">
                     <h5 class="fw-bold mb-3">Kontak Kami</h5>
-                    <p class="mb-1"><i class="bi bi-geo-alt"></i> Komplek Industri Beton, Kav. 12, Jl. Konstruksi No. 5, Jakarta Timur</p>
-                    <p class="mb-1"><i class="bi bi-telephone"></i> (021) 765-4321 / 0822-5544-4203</p>
-                    <p><i class="bi bi-envelope"></i> info@kspprecast.com</p>
+                    <p class="mb-1"><i class="bi bi-geo-alt"></i> {{$contacts->address}}</p>
+                    <p class="mb-1"><i class="bi bi-telephone"></i> +{{$contacts->phone}}</p>
+                    <p><i class="bi bi-envelope"></i> {{$contacts->email}}</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="footer-bottom text-center py-3">
-        <p class="mb-0 text-white-50">© 2025 KSPPrecast. All rights reserved.</p>
+        <p class="mb-0 text-white-50">© 2025 <a href="">PT. Karya Solusi Pracetak</a>. All rights reserved. Made by <a href="https://liradigi.id" target="_blank">LiraDigi.</a></p>
     </div>
 
 </footer>

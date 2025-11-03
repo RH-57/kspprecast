@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lira Tour - Paket Wisata</title>
-    {{-- AOS Library --}}
+
+    {{-- ✅ SEO Title dan Meta Description --}}
+    <title>KSP Precast - Solusi Beton Pracetak Berkualitas Tinggi untuk Konstruksi Hebat</title>
+    <meta name="description" content="KSP Precast menyediakan produk beton pracetak berkualitas tinggi dengan teknologi pabrik terkontrol. Mitra terpercaya untuk proyek konstruksi cepat, kuat, dan efisien.">
+    <meta name="keywords" content="beton pracetak, precast, KSP Precast, konstruksi, material bangunan, panel beton, balok pracetak, kolom beton">
+    <meta name="author" content="KSP Precast">
+
+    {{-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) --}}
+    <meta property="og:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
+    <meta property="og:description" content="KSP Precast menyediakan beton pracetak berkualitas tinggi untuk proyek konstruksi cepat, kuat, dan efisien.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/web/img/og-image.jpg') }}">
+    <meta property="og:site_name" content="KSP Precast">
+
+    {{-- ✅ Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
+    <meta name="twitter:description" content="Spesialis beton pracetak berkualitas tinggi dengan efisiensi waktu dan mutu terjamin.">
+    <meta name="twitter:image" content="{{ asset('assets/web/img/og-image.jpg') }}">
+
+    {{-- ✅ Canonical URL --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    {{-- ✅ Favicon --}}
+    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
+
+    {{-- ✅ AOS & Bootstrap Icons --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-
-    <link href="{{asset('build/assets/app-Dysi2LRN.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('build/assets/app-Buv9-TBA.css')}}">
 </head>
 <body>
 
@@ -108,83 +133,41 @@
         </div>
     </section>
 
-    {{-- Sewa Mobil & Bus Section --}}
+    {{-- Produk --}}
     <section id="sewa-mobil" class="py-5 sewa-section bg-white">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Produk Unggulan KSPPrecast</h2>
-                <p class="text-muted">Nikmati perjalanan nyaman dengan armada terbaik dari Lira Tour</p>
+            <h2 class="fw-bold text-primary">Produk Unggulan KSPPrecast</h2>
+            <p class="text-muted">Nikmati perjalanan nyaman dengan armada terbaik dari Lira Tour</p>
             </div>
 
             <div class="row g-4">
-                {{-- Mobil 1 --}}
+            @foreach($products as $product)
                 <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
+                            <img src="{{ asset('storage/' . $product->cover_image) }}" class="card-img-top" alt="{{ $product->name }}">
                         </div>
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
-                            target="_blank" class="btn btn-primary w-100 rounded-pill">
+                        <div class="card-body d-flex flex-column justify-content-between text-center p-4">
+                            <div>
+                            <a href="" class="text-decoration-none"><h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5></a>
+                            </div>
+                            <div class="mt-auto">
+                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
+                                target="_blank"
+                                class="btn btn-primary w-100 rounded-pill mb-2">
                                 <i class="bi bi-whatsapp me-2"></i>Beli
                             </a>
-                            <a href="">Lihat Detail</a>
+                            <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
-                        <div class="position-relative">
-                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
-                        </div>
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
-                            target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
-                        <div class="position-relative">
-                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
-                        </div>
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
-                            target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
-                        <div class="position-relative">
-                            <img src="{{ asset('storage/products/u.jpg') }}" class="card-img-top" alt="Grand New Avanza">
-                        </div>
-                        <div class="card-body text-center p-4">
-                            <h5 class="fw-bold text-primary">U-Ditch (Saluran Terbuka)</h5>
-                            <p class="text-success fw-semibold mb-1">Rp. 550.000 <small class="text-muted">/ 12 Jam</small></p>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20sewa%20Avanza%20FWD."
-                            target="_blank" class="btn btn-primary w-100 rounded-pill">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
-                            </a>
-                            <a href="">Lihat Detail</a>
-                        </div>
-                    </div>
-                </div>
+            @endforeach
             </div>
         </div>
     </section>
+
 
 
     @include('web.components.banner')
@@ -192,7 +175,7 @@
     @include('web.components.whatsapp')
 
     @include('web.components.footer')
-    <script src="{{asset('build/assets/app-gY57bFlj.js')}}"></script>
+    <!--<script src="{{asset('build/assets/app-gY57bFlj.js')}}"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({

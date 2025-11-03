@@ -1,0 +1,31 @@
+{
+  "public/assets/web/img/banner.webp": {
+    "file": "assets/banner-D-AGI0bC.webp",
+    "src": "public/assets/web/img/banner.webp"
+  },
+  "public/assets/web/img/hero.webp": {
+    "file": "assets/hero-DfKCLBHG.webp",
+    "src": "public/assets/web/img/hero.webp"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DFn5KvC6.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Cquvts3j.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-Buv9-TBA.css"
+    ],
+    "assets": [
+      "assets/hero-DfKCLBHG.webp",
+      "assets/banner-D-AGI0bC.webp"
+    ]
+  }
+}

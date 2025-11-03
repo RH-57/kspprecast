@@ -5,13 +5,14 @@
 /* -------------------------------
    CUSTOM STYLE
 -------------------------------- */
-$primary-color: #1E90FF;
-$primary-hover: lighten($primary-color, 10%);
+$primary-color: #3993ae;
+$primary-hover: #FFD700;
 $font-family-base: 'Poppins', sans-serif;
 
 /* -------------------------------
    TOPBAR
 -------------------------------- */
+
 .topbar {
   background-color: $primary-color;
   color: #fff;
@@ -48,7 +49,7 @@ font-family: $font-family-base;
       bottom: 4px;
       width: 0;
       height: 2px;
-      background-color: #1E90FF;
+      background-color: #FFD700;
       transition: width 0.3s ease;
     }
 
@@ -84,6 +85,7 @@ font-family: $font-family-base;
 
   &:hover {
     background-color: $primary-hover;
+    color: #0d549b;
   }
 }
 
@@ -96,7 +98,7 @@ font-family: $font-family-base;
   display: flex;
   align-items: center;
   background:
-    url('../../public/assets/web/img/banner.png') center/cover no-repeat;
+    url('../../public/assets/web/img/hero.webp') center/cover no-repeat;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -144,7 +146,8 @@ font-family: $font-family-base;
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: #0d549b;
+        background-color: #FFD700;
+        color: #0d549b;
         transform: translateY(-2px);
       }
     }
@@ -183,7 +186,7 @@ font-family: $font-family-base;
 -------------------------------- */
 .footer {
   position: relative;
-  background: linear-gradient(180deg, #1E90FF 0%, #0A58CA 100%);
+  background: linear-gradient(135deg, #2b5876 0%, #3993ae 100%);
   color: #fff;
   overflow: hidden;
 
@@ -204,7 +207,8 @@ font-family: $font-family-base;
   .footer-content {
     position: relative;
     z-index: 2;
-    background: linear-gradient(180deg, #1E90FF 0%, #084298 100%);
+    background: linear-gradient(135deg, #2b5876 0%, #3993ae 100%);
+
   }
 
   .social-link {
@@ -257,7 +261,8 @@ font-family: $font-family-base;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: lighten(#1E90FF, 8%);
+      background-color: $primary-hover;
+      color: #0d549b;
       transform: translateY(-2px);
     }
   }
@@ -273,7 +278,7 @@ font-family: $font-family-base;
 }
 
 .why-us-section {
-  background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+  background: linear-gradient(135deg, #2b5876 0%, #3993ae 100%);
 }
 
 
@@ -326,7 +331,8 @@ font-family: $font-family-base;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: $primary-hover;
+    color: #0d549b;
     transform: translateY(-2px);
 }
 
@@ -383,7 +389,7 @@ font-family: $font-family-base;
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 0;
-    pointer-events: none; /* ⬅️ Tambahkan baris ini */
+    pointer-events: none;
 }
 
 
@@ -406,15 +412,27 @@ font-family: $font-family-base;
 /* Gambar mobil */
 .sewa-section .card-img-top {
     width: 100%;
-    height: 200px; /* tinggi default */
-    object-fit: contain; /* gambar tidak terpotong */
-    background: linear-gradient(to bottom, #eef5ff, #ffffff);
+    height: 220px; /* bisa disesuaikan */
+    object-fit: cover; /* gambar akan menutupi penuh area */
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: none; /* hilangkan gradasi abu */
     transition: transform 0.4s ease;
-    border-radius: 1rem;
 }
 
 .sewa-section .car-card:hover .card-img-top {
     transform: scale(1.05);
+}
+
+.sewa-section .car-card .position-relative {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 /* Badge jumlah seat */
@@ -422,7 +440,7 @@ font-family: $font-family-base;
     position: absolute;
     top: 15px;
     left: 15px;
-    background: #007bff;
+    background: $primary-color;
     color: #fff;
     padding: 4px 10px;
     border-radius: 20px;
@@ -432,21 +450,20 @@ font-family: $font-family-base;
 }
 
 .sewa-section .seat-orange {
-    background: #1E90FF;
+    background: $primary-color;
 }
 
 /* Tombol Booking Now */
 .sewa-section .btn-primary {
-    background: linear-gradient(90deg, #007bff, #0062cc);
+    background: $primary-color;
     border: none;
     color: #fff;
     transition: all 0.3s ease;
 }
 
 .sewa-section .btn-primary:hover {
-    background: linear-gradient(90deg, #0056b3, #003f88);
+    background: $primary-hover;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 /* Teks fitur kecil */
@@ -463,7 +480,8 @@ font-family: $font-family-base;
 }
 
 .bg-gradient-testimoni {
-  background: linear-gradient(180deg, #007bff 0%, #2990ff 100%);
+  background: linear-gradient(135deg, #2b5876 0%, #3993ae 100%);
+
 }
 
 .card-testimoni {
@@ -504,7 +522,6 @@ font-family: $font-family-base;
 ========================= */
 .cta-borobudur-section {
   position: relative;
-  background: url("../assets/web/img/about.jpg") center center/cover no-repeat;
   padding: 100px 0;
   border-radius: 10px;
   margin: 80px auto;
@@ -544,7 +561,7 @@ font-family: $font-family-base;
 }
 
 .cta-borobudur-section .btn-primary {
-  background-color: #007bff;
+  background-color: $primary-color;
   border: none;
   padding: 12px 30px;
   border-radius: 10px;
@@ -552,7 +569,8 @@ font-family: $font-family-base;
 }
 
 .cta-borobudur-section .btn-primary:hover {
-  background-color: #0b3277;
+  background-color: $primary-hover;
+  color: $primary-color;
   transform: translateY(-3px);
 }
 
@@ -592,7 +610,7 @@ font-family: $font-family-base;
 
 .hero-contact {
     background: linear-gradient(to right, rgba(0, 153, 255, 0.568), rgba(51, 146, 255, 0.5)),
-                url('../../public/assets/web/img/about.jpg') center/cover no-repeat;
+                url('../../public/assets/web/img/banner.webp') center/cover no-repeat;
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -640,11 +658,9 @@ font-family: $font-family-base;
 }
 
 .hero-about {
-    background: linear-gradient(to right, rgba(0, 153, 255, 0.568), rgba(51, 146, 255, 0.5)),
-                url('../../public/assets/web/img/about.jpg') center/cover no-repeat;
-    color: white;
-    padding: 120px 0;
-    text-align: center;
+    background: url('../../public/assets/web/img/banner.webp') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
 }
 .hero-about h1 {
     font-weight: 700;
@@ -713,6 +729,222 @@ font-family: $font-family-base;
     box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
   }
 }
+
+/* ================================
+   CUSTOM DROPDOWN NAVBAR
+================================ */
+.navbar {
+  .custom-dropdown {
+    position: relative;
+
+    .dropdown-menu-custom {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 999;
+    list-style: none;
+    }
+
+    &:hover .dropdown-menu-custom {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu-custom li a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f8f9fa;
+        color: $primary-color;
+        padding-left: 25px;
+      }
+    }
+
+    i.bi-chevron-down {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover i.bi-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.project-card {
+  .btn {
+    margin-top: -60px; /* tetap gunakan posisi tombol */
+    z-index: 2;
+    position: relative;
+  }
+
+  .project-thumb img {
+    width: 100%;
+    height: 220px; /* atur tinggi gambar agar seragam */
+    object-fit: cover; /* gambar menyesuaikan tanpa distorsi */
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .project-thumb img {
+    transform: scale(1.05);
+  }
+
+  /* Responsive agar tetap proporsional di mobile */
+  @media (max-width: 768px) {
+    .project-thumb img {
+      height: 180px;
+    }
+  }
+}
+
+/* =============================
+   GALERI PROYEK DETAIL
+============================= */
+.project-detail .gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-detail .gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail .gallery-thumb {
+  width: 100%;
+  height: 110px; /* kecilkan tinggi thumbnail */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .project-detail .gallery-thumb {
+    height: 130px; /* sedikit lebih besar di desktop */
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-detail .gallery-thumb {
+    height: 140px;
+  }
+}
+
+.hero-produk {
+    background: url('../../public/assets/web/img/banner.webp') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
+}
+.hero-produk .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+.produk-card {
+    transition: all 0.3s ease;
+}
+.produk-card:hover {
+    transform: translateY(-5px);
+}
+.kategori-filter {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+.kategori-filter::-webkit-scrollbar {
+    height: 6px;
+}
+.kategori-filter::-webkit-scrollbar-thumb {
+    background: #1E90FF;
+    border-radius: 10px;
+}
+
+/* ================================
+   GLOBAL TABLE STYLING (CKEditor, dll)
+   ================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+/* Responsif di layar kecil */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Scrollable description section */
+.scrollable-description {
+  max-height: 480px; /* tinggi tetap agar sejajar dengan gambar */
+  overflow-y: auto;
+  padding-right: 8px;
+
+  /* Hilangkan scrollbar di semua browser */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE dan Edge lama */
+}
+
+.scrollable-description::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge baru */
+}
+
+/* Deskripsi dalam CKEditor */
+.description-content {
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .scrollable-description {
+    max-height: unset;
+    overflow: visible;
+  }
+}
+
+
+
 
 
 

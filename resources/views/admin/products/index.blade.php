@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Projects - Admin</title>
+  <title>Products - Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,11 +51,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Projectes</h1>
+      <h1>Products</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{{route('dashboard.index')}}">Home</a></li>
-          <li class="breadcrumb-item active">Projects</li>
+          <li class="breadcrumb-item active">Products</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -72,43 +72,39 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <h5 class="card-title">
-                                Manage <span>| Projects</span>
+                                Manage <span>| Product</span>
                             </h5>
-                            <a class="btn btn-sm btn-primary" href="{{route('projects.create')}}">Add</a>
+                            <a class="btn btn-sm btn-primary" href="{{route('products.create')}}">Add</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-middle">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Year</th>
-                                        <th scope="col">Cover</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Cover Image</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($projects as $index =>$project)
+                                    @foreach($products as $product)
                                     <tr>
-                                        <td>{{$index + 1}}</td>
-                                        <td>{{$project->name}}</td>
-                                        <td>{{$project->location}}</td>
-                                        <td>{{$project->year}}</td>
+                                        <td>{{$product->name}}</td>
+                                        <td>{{$product->category->name}}</td>
                                         <td>
-                                            @if($project->cover_image)
-                                                <img src="{{ asset('storage/' . $project->cover_image) }}"
-                                                    alt="{{ $project->name }}"
+                                            @if($product->cover_image)
+                                                <img src="{{ asset('storage/' . $product->cover_image) }}"
+                                                    alt="{{ $product->name }}"
                                                     style="width: 80px; height: 60px; object-fit: cover; border-radius: 5px;">
                                             @else
                                                 <span class="text-muted">No Cover</span>
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('projects.show', $project->slug) }}" class="btn btn-sm btn-info">
+                                            <a href="{{ route('products.show', $product->slug) }}" class="btn btn-sm btn-info">
                                                 <i class="bi bi-eye"></i>
                                             </a>
-                                            <form action="{{ route('projects.destroy', $project->id)}}" method="POST" style="display:inline;">
+                                            <form action="{{ route('products.destroy', $product->id)}}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this service?')">
@@ -118,8 +114,12 @@
                                         </td>
                                     </tr>
                                     @endforeach
+
                                 </tbody>
                             </table>
+                            <div class="mt-3 d-flex justify-content-center">
+                                {{ $products->links('pagination::bootstrap-5') }}
+                            </div>
                         </div>
                     </div>
                 </div>

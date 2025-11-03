@@ -1,6 +1,6 @@
 <section id="cta-borobudur" class="cta-borobudur-section"
          style="background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url('{{ asset('storage/products/u.jpg') }}') center center/cover no-repeat;">
+                url('{{ asset('assets/web/img/banner.webp') }}') center center/cover no-repeat;">
   <div class="container text-center text-white py-5">
     <h2 class="fw-bold mb-3">Wujudkan Proyek Berkecepatan Tinggi dan Berkualitas</h2>
     <p class="mb-4">
