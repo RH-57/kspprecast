@@ -126,7 +126,7 @@
 
         <div class="row g-4">
             @foreach($relatedProducts as $item)
-            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
                     <img src="{{ asset('storage/' . $item->cover_image) }}" class="card-img-top" alt="{{ $item->name }}">
                     <div class="card-body text-center p-4">

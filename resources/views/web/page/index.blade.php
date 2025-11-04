@@ -144,7 +144,7 @@
 
             <div class="row g-4">
             @foreach($products as $product)
-                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
                         <div class="position-relative">
                             <img src="{{ asset('storage/' . $product->cover_image) }}" class="card-img-top" alt="{{ $product->name }}" loading="lazy">
