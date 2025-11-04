@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\Encoders\WebpEncoder;
@@ -14,7 +15,9 @@ use Illuminate\Support\Str;
 class ProductCategoryController extends Controller
 {
     public function index() {
-        $categories = ProductCategory::get();
+        $categories = Cache::remember('product_categories', 3600, function () {
+            return ProductCategory::get();
+        });
         return view('admin.products.categories.index', compact('categories'));
     }
 
@@ -63,6 +66,8 @@ class ProductCategoryController extends Controller
             'description'   => $request->description,
             'image'         => $imagePath,
         ]);
+
+        Cache::forget('product_categories');
 
         return redirect()->route('categories.index')->with('success', 'Product Category Created Successfully');
     }
@@ -122,6 +127,8 @@ class ProductCategoryController extends Controller
         $category->description = $request->description;
         $category->save();
 
+        Cache::forget('product_categories');
+
         return redirect()->route('categories.index')->with('success', 'Product Category Updated Successfully');
     }
 
@@ -135,6 +142,8 @@ class ProductCategoryController extends Controller
         }
 
         $category->delete();
+
+        Cache::forget('product_categories');
 
         return redirect()->route('categories.index')->with('success', 'Product Category Deleted Successfully');
     }
