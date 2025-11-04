@@ -133,7 +133,7 @@
                         <a href="{{ route('web-product-detail', $item->slug) }}" class="text-decoration-none">
                             <h6 class="fw-bold text-primary">{{ $item->name }}</h6>
                         </a>
-                        <a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
+                        <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                             target="_blank"
                             class="btn btn-primary w-100 rounded-pill mb-2">
                             <i class="bi bi-whatsapp me-2"></i>Beli
