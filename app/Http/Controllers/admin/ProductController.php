@@ -9,6 +9,7 @@ use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\Encoders\WebpEncoder;
@@ -24,7 +25,10 @@ class ProductController extends Controller
 
     public function create()
     {
-        $categories = ProductCategory::orderBy('name')->get();
+
+        $categories = Cache::remember('product_categories', 3600, function () {
+            return ProductCategory::orderBy('name')->get();
+        });
         return view('admin.products.create', compact('categories'));
     }
 
@@ -114,6 +118,10 @@ class ProductController extends Controller
             }
         }
 
+        Cache::forget('products');
+        Cache::forget('homepage_data');
+        Cache::forget("products_category_{$request->product_category_id}");
+        Cache::forget('products_all');
 
         return redirect()->route('products.index')->with('success', 'Product created successfully!');
     }
@@ -236,6 +244,11 @@ class ProductController extends Controller
             }
         }
 
+        Cache::forget('products');
+        Cache::forget('homepage_data');
+        Cache::forget("products_category_{$request->product_category_id}");
+        Cache::forget('products_all');
+
         return redirect()->route('products.index')->with('success', 'Product updated successfully!');
     }
 
@@ -258,6 +271,11 @@ class ProductController extends Controller
         }
 
         $product->delete();
+
+        Cache::forget('products');
+        Cache::forget('homepage_data');
+        Cache::forget("products_category_{$product->product_category_id}");
+        Cache::forget('products_all');
 
         return redirect()->route('products.index')->with('success', 'Product deleted successfully!');
     }

@@ -8,28 +8,39 @@ use App\Models\MediaSocial;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ProductController extends Controller
 {
     public function index(Request $request) {
-        $contacts = Contact::first();
-        $medsos = MediaSocial::get();
-        $productCat = ProductCategory::get();
+        $contacts = Cache::remember('contacts', 3600, function () {
+            return Contact::first();
+        });
+
+        $medsos = Cache::remember('mediasocials', 3600, function () {
+            return MediaSocial::get();
+        });
+
+        $productCat = Cache::remember('product_categories', 3600, function () {
+            return ProductCategory::get();
+        });
 
         $selectedCategory = $request->get('category');
 
         if ($selectedCategory) {
             $category = ProductCategory::where('slug', $selectedCategory)->first();
 
-            if($category) {
-                $products = Product::where('product_category_id', $category->id)->get();
+            if ($category) {
+                $cacheKey = "products_category_{$category->id}";
+                $products = Cache::remember($cacheKey, 3600, function () use ($category) {
+                    return Product::where('product_category_id', $category->id)->get();
+                });
             } else {
-                $products = Product::all();
+                $products = Cache::remember('products_all', 3600, fn() => Product::all());
             }
         } else {
-            $products = Product::all();
+            $products = Cache::remember('products_all', 3600, fn() => Product::all());
         }
-
 
         return view('web.page.product', compact(
             'contacts',

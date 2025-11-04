@@ -8,14 +8,26 @@ use App\Models\MediaSocial;
 use App\Models\ProductCategory;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ProjectController extends Controller
 {
     public function index() {
-        $contacts = Contact::first();
-        $medsos = MediaSocial::get();
-        $productCat = ProductCategory::get();
-        $projects = Project::get();
+        $contacts = Cache::remember('contacts', 3600, function () {
+            return Contact::first();
+        });
+
+        $medsos = Cache::remember('mediasocials', 3600, function () {
+            return MediaSocial::get();
+        });
+
+        $productCat = Cache::remember('product_categories', 3600, function () {
+            return ProductCategory::get();
+        });
+
+        $projects = Cache::remember('projects', 3600, function () {
+            return Project::with('images')->latest()->get();
+        });
 
         return view('web.page.project', compact(
             'contacts',
@@ -26,10 +38,22 @@ class ProjectController extends Controller
     }
 
     public function show($slug) {
-        $contacts = Contact::first();
-        $medsos = MediaSocial::get();
-        $productCat = ProductCategory::get();
-        $project = Project::where('slug', $slug)->firstOrFail();
+         $contacts = Cache::remember('contacts', 3600, function () {
+            return Contact::first();
+        });
+
+        $medsos = Cache::remember('mediasocials', 3600, function () {
+            return MediaSocial::get();
+        });
+
+        $productCat = Cache::remember('product_categories', 3600, function () {
+            return ProductCategory::get();
+        });
+
+        // Cache per project berdasarkan slug (unik)
+        $project = Cache::remember("project_{$slug}", 3600, function () use ($slug) {
+            return Project::with('images')->where('slug', $slug)->firstOrFail();
+        });
 
         $relatedProjects = Project::with('images')->where('id', '!=', $project->id)
                             ->latest()
