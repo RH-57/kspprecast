@@ -102,7 +102,7 @@
                     </div>
 
                     {{-- Tombol WhatsApp --}}
-                    <a href="https://wa.me/6281234567890?text=Halo%20KSP%20Precast!%20Saya%20ingin%20membeli%20produk%20{{ urlencode($product->name) }}."
+                    <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                     target="_blank"
                     class="btn btn-primary rounded-pill px-4 py-2 align-self-start">
                         <i class="bi bi-whatsapp me-2"></i>Hubungi via WhatsApp
