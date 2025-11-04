@@ -19,7 +19,6 @@ class UserSeeder extends Seeder
                 'name' => 'Kukuh Andriansah',
                 'email' => 'kukuhandriansah10@gmail.com',
                 'password' => Hash::make('Sartimah26.'), // Ganti sesuai keinginan
-                'role' => 'superadmin', // Jika tabel user kamu punya kolom 'role'
             ]);
         }
     }
