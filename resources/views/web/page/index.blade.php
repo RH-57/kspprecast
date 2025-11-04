@@ -139,7 +139,7 @@
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="fw-bold text-primary">Produk Unggulan KSPPrecast</h2>
-            <p class="text-muted">Nikmati perjalanan nyaman dengan armada terbaik dari Lira Tour</p>
+            <p class="text-muted">Solusi konstruksi precast berkualitas tinggi untuk pembangunan yang lebih efisien, cepat, dan hemat biaya.</p>
             </div>
 
             <div class="row g-4">
