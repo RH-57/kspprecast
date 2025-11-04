@@ -44,7 +44,8 @@
                 </li>
             </ul>
 
-            <a href="https://wa.me/6282255444203" class="btn btn-contact">Hubungi Kami!</a>
+            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak%20"
+                target="_blank" class="btn btn-contact">Hubungi Kami!</a>
         </div>
     </div>
 </nav>

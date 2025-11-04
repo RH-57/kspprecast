@@ -1,4 +1,4 @@
-<a href="https://wa.me/6281234567890?text=Halo%20Lira%20Tour!%20Saya%20ingin%20bertanya%20tentang%20paket%20wisata."
+<a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak%20"
    class="whatsapp-float" target="_blank" title="Hubungi Kami di WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>

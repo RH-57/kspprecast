@@ -6,7 +6,7 @@
     <p class="mb-4">
       Jangan tunda proyek Anda. Konsultasikan kebutuhan elemen beton pracetak (precast) Anda dengan tim ahli kami sekarang untuk mendapatkan solusi konstruksi yang efisien dan presisi.
     </p>
-    <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-primary btn-lg fw-bold">
+    <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak%20" target="_blank" class="btn btn-primary btn-lg fw-bold">
       <i class="bi bi-whatsapp me-2"></i> Konsultasi Sekarang
     </a>
   </div>
