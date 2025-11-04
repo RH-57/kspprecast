@@ -86,7 +86,7 @@
             </div>
 
             <div class="mt-3">
-                <a href="{{ route('web-project') }}" class="btn btn-outline-primary rounded-pill px-4 py-2">
+                <a href="{{ route('web-project') }}" class="btn btn-contact rounded-pill px-4 py-2">
                 <i class="bi bi-arrow-left me-2"></i> Kembali ke Proyek
                 </a>
             </div>
