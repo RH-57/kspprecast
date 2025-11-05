@@ -63,7 +63,7 @@
             <div class="row gy-4">
                 {{-- Gambar kiri --}}
                 <div class="col-md-6" data-aos="fade-right">
-                    <img src="{{ asset('assets/web/img/about.jpg') }}" alt="Tentang KSPPrecast" class="img-fluid rounded-4 shadow-lg" loading="lazy">
+                    <img src="{{ asset('assets/web/img/about.webp') }}" alt="Tentang KSPPrecast" class="img-fluid rounded-4 shadow-lg" loading="lazy">
                 </div>
 
                 {{-- Deskripsi kanan --}}
