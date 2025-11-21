@@ -73,14 +73,14 @@
 
 
                 <div class="card-body">
-                  <h5 class="card-title">Project</h5>
+                  <h5 class="card-title">Product Category</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-bag"></i>
                     </div>
                     <div class="ps-3">
-                      <h6></h6>
+                      <h6>{{$productCategory}}</h6>
                       <span class="text-muted small pt-2 ps-1">Total</span>
 
                     </div>
@@ -95,14 +95,14 @@
               <div class="card info-card revenue-card">
 
                 <div class="card-body">
-                  <h5 class="card-title">Posts</h5>
+                  <h5 class="card-title">Products</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-pen"></i>
                     </div>
                     <div class="ps-3">
-                      <h6></h6>
+                      <h6>{{$products}}</h6>
                       <span class="text-muted small pt-2 ps-1">Total</span>
 
                     </div>
@@ -111,30 +111,6 @@
 
               </div>
             </div><!-- End Revenue Card -->
-
-            <!-- Customers Card -->
-            <div class="col-xxl-4 col-md-6">
-
-              <div class="card info-card customers-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Visitor <span>| Today</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6></h6>
-                        <span class="text-muted small pt-2 ps-1">People</span>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div><!-- End Customers Card -->
 
             <!-- Reports -->
             <div class="col-12">

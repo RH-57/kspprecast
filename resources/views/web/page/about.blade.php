@@ -74,7 +74,7 @@
                         <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Pemasangan lebih cepat dan efisien waktu</li>
                         <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Beragam produk struktural precast (balok, kolom, panel, dll.)</li>
                     </ul>
-                    <a href="#" class="btn btn-about mt-4">Lihat Produk Kami</a>
+                    <a href="{{route('web-product')}}" class="btn btn-about mt-4">Lihat Produk Kami</a>
                 </div>
             </div>
         </div>
