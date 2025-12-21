@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {{-- ✅ SEO Title dan Meta Description --}}
-    <title>KSP Precast - Solusi Beton Pracetak Berkualitas Tinggi untuk Konstruksi Hebat</title>
+    <title>Solusi Beton Pracetak Berkualitas untuk Konstruksi Modern & Andal - KSP Precast</title>
     <meta name="description" content="KSP Precast menyediakan produk beton pracetak berkualitas tinggi dengan teknologi pabrik terkontrol. Mitra terpercaya untuk proyek konstruksi cepat, kuat, dan efisien.">
     <meta name="keywords" content="beton pracetak, precast, KSP Precast, konstruksi, material bangunan, panel beton, balok pracetak, kolom beton">
     <meta name="author" content="KSP Precast">

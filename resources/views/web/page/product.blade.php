@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk Kami - KSP Precast</title>
+    <title>Produk Beton Pracetak Berkualitas - KSP Precast</title>
     <meta name="description" content="Temukan berbagai produk beton pracetak berkualitas tinggi dari KSP Precast untuk mendukung kebutuhan konstruksi Anda.">
     <meta name="keywords" content="beton pracetak, precast, produk beton, KSP Precast, konstruksi">
     <meta name="author" content="KSP Precast">

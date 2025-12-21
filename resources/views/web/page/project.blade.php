@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyek Kami - KSP Precast | Portofolio Konstruksi Beton Pracetak</title>
+  <title>Portofolio Proyek Konstruksi Beton Pracetak - KSP Precast</title>
 
   {{-- ✅ SEO Meta Tags --}}
   <meta name="description" content="Lihat portofolio proyek KSP Precast. Kami telah menyelesaikan berbagai proyek konstruksi menggunakan beton pracetak berkualitas tinggi untuk infrastruktur dan gedung di seluruh Indonesia.">
