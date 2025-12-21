@@ -68,7 +68,7 @@
             <!-- Text Content -->
             <div class="col-lg-6 text-center text-lg-start">
 
-                <div class="error-number text-primary mb-3 floating" data-aos="zoom-in">
+                <div class="error-number text-primary mb-3" data-aos="zoom-in">
                     404
                 </div>
 
