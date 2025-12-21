@@ -45,3 +45,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::resource('/users', UserController::class);
 });
+
+Route::fallback(function () {
+    return response()->view('web.errors.404', [], 404);
+});
