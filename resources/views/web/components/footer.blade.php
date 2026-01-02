@@ -39,7 +39,7 @@
     </div>
 
     <div class="footer-bottom text-center py-3">
-        <p class="mb-0 text-white-50">© 2025 <a href="">PT. Karya Solusi Pracetak</a>. All rights reserved. Made by <a href="https://liradigi.id" target="_blank">LiraDigi.</a></p>
+        <p class="mb-0 text-white-50">© 2026 <a href="">PT. Karya Solusi Pracetak</a>. All rights reserved. Made by <a href="https://liradigi.id" target="_blank">LiraDigi.</a></p>
     </div>
 
 </footer>
