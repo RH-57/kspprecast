@@ -49,7 +49,7 @@
                             </div>
                             <div class="mt-auto">
                                 @if($product->lowest_price)
-                                    <p class="fw-semibold text-dark mb-3">
+                                    <p class="text-muted mb-3">
                                         Mulai dari
                                         <span class="text-primary">
                                             Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
