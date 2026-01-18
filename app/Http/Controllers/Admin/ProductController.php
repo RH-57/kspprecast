@@ -18,31 +18,25 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with('category')->latest()->paginate(10);
+        $products = Product::latest()->paginate(10);
 
         return view('admin.products.index', compact('products'));
     }
 
     public function create()
     {
-
-        $categories = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::orderBy('name')->get();
-        });
-        return view('admin.products.create', compact('categories'));
+        return view('admin.products.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'product_category_id' => 'required|exists:product_categories,id',
             'name'                => 'required|string|max:150',
             'description'         => 'required|string',
             'cover_image'         => 'required|image|mimes:jpg,jpeg,png,webp|max:4096',
             'images.*'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'meta_title'          => 'nullable|string|max:150',
             'meta_description'    => 'nullable|string|max:255',
-            'meta_keyword'        => 'nullable|string|max:255',
         ]);
 
         $manager = new ImageManager(new Driver());
@@ -76,14 +70,12 @@ class ProductController extends Controller
 
         // === Simpan Data Produk ===
         $product = Product::create([
-            'product_category_id' => $request->product_category_id,
             'name'                => $request->name,
             'slug'                => $slug,
             'description'         => $request->description,
             'cover_image'         => $coverPath,
             'meta_title'          => $request->meta_title,
             'meta_description'    => $request->meta_description,
-            'meta_keyword'        => $request->meta_keyword,
         ]);
 
         // === Upload Multiple Images ===
@@ -120,7 +112,6 @@ class ProductController extends Controller
 
         Cache::forget('products');
         Cache::forget('homepage_data');
-        Cache::forget("products_category_{$request->product_category_id}");
         Cache::forget('products_all');
 
         return redirect()->route('products.index')->with('success', 'Product created successfully!');
@@ -129,7 +120,7 @@ class ProductController extends Controller
      // ====================== SHOW ======================
     public function show($slug)
     {
-        $product = Product::with(['category', 'images'])->where('slug', $slug)->firstOrFail();
+        $product = Product::with('images')->where('slug', $slug)->firstOrFail();
         return view('admin.products.show', compact('product'));
     }
 
@@ -137,8 +128,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::with('images')->findOrFail($id);
-        $categories = ProductCategory::orderBy('name')->get();
-        return view('admin.products.edit', compact('product', 'categories'));
+        return view('admin.products.edit', compact('product'));
     }
 
     public function deleteImage($id) {
@@ -158,14 +148,12 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
 
         $request->validate([
-            'product_category_id' => 'required|exists:product_categories,id',
             'name'                => 'required|string|max:150',
             'description'         => 'required|string',
             'cover_image'         => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'images.*'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'meta_title'          => 'nullable|string|max:150',
             'meta_description'    => 'nullable|string|max:255',
-            'meta_keyword'        => 'nullable|string|max:255',
         ]);
 
         $manager = new ImageManager(new Driver());
@@ -203,12 +191,10 @@ class ProductController extends Controller
 
         // === Update Text Fields ===
         $product->update([
-            'product_category_id' => $request->product_category_id,
             'name'                => $request->name,
             'description'         => $request->description,
             'meta_title'          => $request->meta_title,
             'meta_description'    => $request->meta_description,
-            'meta_keyword'        => $request->meta_keyword,
         ]);
 
         // Hapus semua varian lama
@@ -246,7 +232,6 @@ class ProductController extends Controller
 
         Cache::forget('products');
         Cache::forget('homepage_data');
-        Cache::forget("products_category_{$request->product_category_id}");
         Cache::forget('products_all');
 
         return redirect()->route('products.index')->with('success', 'Product updated successfully!');
@@ -274,7 +259,6 @@ class ProductController extends Controller
 
         Cache::forget('products');
         Cache::forget('homepage_data');
-        Cache::forget("products_category_{$product->product_category_id}");
         Cache::forget('products_all');
 
         return redirect()->route('products.index')->with('success', 'Product deleted successfully!');

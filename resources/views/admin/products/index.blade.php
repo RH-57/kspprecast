@@ -81,7 +81,6 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Category</th>
                                         <th scope="col">Cover Image</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -90,7 +89,6 @@
                                     @foreach($products as $product)
                                     <tr>
                                         <td>{{$product->name}}</td>
-                                        <td>{{$product->category->name}}</td>
                                         <td>
                                             @if($product->cover_image)
                                                 <img src="{{ asset('storage/' . $product->cover_image) }}"

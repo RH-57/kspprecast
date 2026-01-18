@@ -17,13 +17,14 @@
                     </div>
                 </div>
 
-                {{-- Kolom 2: Tautan Produk & Solusi --}}
+                {{-- Kolom 2: Menu Cepat --}}
                 <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">Produk & Solusi</h5>
-                    <ul class="list-unstyled">
-                        @foreach($productCat as $category)
-                        <li><a href="#">{{$category->name}}</a></li>
-                        @endforeach
+                    <h5 class="fw-bold mb-3">Menu Cepat</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="{{ route('web-home') }}">Beranda</a></li>
+                        <li><a href="{{ route('web-product') }}">Produk</a></li>
+                        <li><a href="{{ route('web-about') }}">Tentang Kami</a></li>
+                        <li><a href="{{ route('web-contact') }}">Kontak</a></li>
                     </ul>
                 </div>
 

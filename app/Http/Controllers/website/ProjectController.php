@@ -21,10 +21,6 @@ class ProjectController extends Controller
             return MediaSocial::get();
         });
 
-        $productCat = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::get();
-        });
-
         $projects = Cache::remember('projects', 3600, function () {
             return Project::with('images')->latest()->get();
         });
@@ -32,7 +28,6 @@ class ProjectController extends Controller
         return view('web.page.project', compact(
             'contacts',
             'medsos',
-            'productCat',
             'projects',
         ));
     }
@@ -44,10 +39,6 @@ class ProjectController extends Controller
 
         $medsos = Cache::remember('mediasocials', 3600, function () {
             return MediaSocial::get();
-        });
-
-        $productCat = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::get();
         });
 
         // Cache per project berdasarkan slug (unik)
@@ -63,7 +54,6 @@ class ProjectController extends Controller
         return view('web.page.project-detail', compact(
             'contacts',
             'medsos',
-            'productCat',
             'project',
             'relatedProjects'
         ));

@@ -15,18 +15,6 @@
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('web-home') }}">Beranda</a>
                 </li>
 
-                {{-- Dropdown Produk --}}
-                <!--<li class="nav-item dropdown custom-dropdown">
-                    <a class="nav-link {{ Request::is('produk*') ? 'active' : '' }}" href="{{route('web-product')}}">
-                        Produk <i class="bi bi-chevron-down ms-1"></i>
-                    </a>
-                    <ul class="dropdown-menu-custom">
-                        @foreach($productCat as $category)
-                        <li><a href="">{{$category->name}}</a></li>
-                        @endforeach
-                    </ul>
-                </li> -->
-
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('product*') ? 'active' : '' }}" href="{{route('web-product')}}">Produk</a>
                 </li>

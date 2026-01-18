@@ -31,47 +31,39 @@
 {{-- Daftar Produk --}}
 <section class="py-5 bg-light sewa-section">
     <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="fw-bold text-primary">
-                {{ $selectedCategory ? 'Kategori: ' . optional($productCat->firstWhere('slug', $selectedCategory))->name : 'Semua Produk' }}
-            </h2>
-            <p class="text-muted">Pilih produk beton pracetak sesuai kebutuhan proyek Anda.</p>
-            <div class="d-flex flex-wrap justify-content-center gap-2 kategori-filter" data-aos="fade-up" data-aos-delay="100">
-                {{-- Tombol Semua --}}
-                <a href="{{ route('web-product') }}"
-                    class="btn btn-sm rounded-pill px-4 py-2 {{ !$selectedCategory ? 'btn-primary' : 'btn-outline-primary' }}">
-                    Semua
-                </a>
-
-                {{-- Tombol Kategori --}}
-                @foreach($productCat as $category)
-                    <a href="{{ route('web-product', ['category' => $category->slug]) }}"
-                        class="btn btn-sm rounded-pill px-4 py-2 {{ $selectedCategory === $category->slug ? 'btn-primary' : 'btn-outline-primary' }}">
-                        {{ $category->name }}
-                    </a>
-                @endforeach
-            </div>
-        </div>
 
         @if($products->count())
         <div class="row g-4">
             @foreach($products as $product)
                 <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
+                    <div class="card border-0 shadow-lg rounded-xl overflow-hidden h-100 car-card">
                         <div class="position-relative">
                             <img src="{{ asset('storage/' . $product->cover_image) }}" class="card-img-top" alt="{{ $product->name }}">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between text-center p-4">
                             <div>
-                            <a href="{{route('web-product-detail', $product->slug)}}" class="text-decoration-none"><h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5></a>
+                                <a href="{{route('web-product-detail', $product->slug)}}" class="text-decoration-none">
+                                    <h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5>
+                                </a>
+
                             </div>
                             <div class="mt-auto">
-                            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
-                                target="_blank"
-                                class="btn btn-primary w-100 rounded-pill mb-2">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
-                            </a>
-                            <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
+                                @if($product->lowest_price)
+                                    <p class="fw-semibold text-dark mb-3">
+                                        Mulai dari
+                                        <span class="text-primary">
+                                            Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
+                                        </span>
+                                    </p>
+                                @else
+                                    <p class="text-muted mb-3">Harga sesuai spesifikasi</p>
+                                @endif
+                                <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
+                                    target="_blank"
+                                    class="btn btn-primary w-100 rounded-xl mb-2">
+                                    <i class="bi bi-whatsapp me-2"></i>Beli
+                                </a>
+                                <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
                             </div>
                         </div>
                     </div>

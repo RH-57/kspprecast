@@ -21,41 +21,21 @@ class ProductController extends Controller
             return MediaSocial::get();
         });
 
-        $productCat = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::get();
+        $products = Cache::remember('products_all', 3600, function () {
+            return Product::with('variants')->get();
         });
-
-        $selectedCategory = $request->get('category');
-
-        if ($selectedCategory) {
-            $category = ProductCategory::where('slug', $selectedCategory)->first();
-
-            if ($category) {
-                $cacheKey = "products_category_{$category->id}";
-                $products = Cache::remember($cacheKey, 3600, function () use ($category) {
-                    return Product::where('product_category_id', $category->id)->get();
-                });
-            } else {
-                $products = Cache::remember('products_all', 3600, fn() => Product::all());
-            }
-        } else {
-            $products = Cache::remember('products_all', 3600, fn() => Product::all());
-        }
 
         return view('web.page.product', compact(
             'contacts',
             'medsos',
             'products',
-            'productCat',
-            'selectedCategory'
         ));
     }
 
     public function show($slug) {
         $contacts = Contact::first();
         $medsos = MediaSocial::get();
-        $productCat = ProductCategory::get();
-        $product = Product::with(['category', 'images', 'variants'])->where('slug', $slug)->firstOrFail();
+        $product = Product::with(['images', 'variants'])->where('slug', $slug)->firstOrFail();
 
         $relatedProducts = Product::where('id', '!=', $product->id)
         ->latest()
@@ -65,7 +45,6 @@ class ProductController extends Controller
         return view('web.page.product-detail', compact(
             'contacts',
             'medsos',
-            'productCat',
             'product',
             'relatedProducts',
         ));

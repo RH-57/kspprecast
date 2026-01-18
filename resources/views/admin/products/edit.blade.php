@@ -60,19 +60,6 @@
               @method('PUT')
 
               <div class="mb-3">
-                <label class="form-label">Category</label>
-                <select name="product_category_id" class="form-select" required>
-                  <option value="">-- Select Category --</option>
-                  @foreach($categories as $cat)
-                    <option value="{{ $cat->id }}" {{ old('product_category_id', $product->product_category_id) == $cat->id ? 'selected' : '' }}>
-                      {{ $cat->name }}
-                    </option>
-                  @endforeach
-                </select>
-                @error('product_category_id') <small class="text-danger">{{ $message }}</small> @enderror
-              </div>
-
-              <div class="mb-3">
                 <label class="form-label">Name</label>
                 <input type="text" name="name" class="form-control"
                        value="{{ old('name', $product->name) }}" required>
@@ -136,7 +123,7 @@
               <div class="mb-3">
                 <label class="form-label">Cover Image</label>
                 <input type="file" name="cover_image" class="form-control" accept="image/*">
-                <small class="text-muted">Upload a new cover image (optional).</small>
+                <small class="text-muted">Upload a new cover image (optional). Max : 4 mb</small>
 
                 {{-- tampilkan cover lama --}}
                 @if ($product->cover_image)
@@ -151,7 +138,7 @@
               <div class="mb-3">
                 <label for="images" class="form-label">Add New Images</label>
                 <input type="file" name="images[]" id="images" class="form-control" multiple accept="image/*">
-                <small class="text-muted">You can upload multiple images (jpg, png, max 10MB each).</small>
+                <small class="text-muted">You can upload multiple images (jpg, png, max 4MB each). </small>
               </div>
 
               <h5 class="mt-4">SEO Meta</h5>
@@ -165,12 +152,6 @@
               <div class="mb-3">
                 <label class="form-label">Meta Description</label>
                 <textarea name="meta_description" class="form-control" rows="2">{{ old('meta_description', $product->meta_description) }}</textarea>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label">Meta Keyword</label>
-                <input type="text" name="meta_keyword" class="form-control"
-                       value="{{ old('meta_keyword', $product->meta_keyword) }}">
               </div>
 
               <div class="mt-4">

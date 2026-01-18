@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Models\MediaSocial;
 use App\Models\Product;
-use App\Models\ProductCategory;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 
@@ -23,18 +22,13 @@ class HomeController extends Controller
             return MediaSocial::get();
         });
 
-        $productCat = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::get();
-        });
-
         $products = Cache::remember('products', 3600, function () {
-            return Product::get();
+            return Product::with('variants')->get();
         });
 
         return view('web.page.index', compact(
             'contacts',
             'medsos',
-            'productCat',
             'products',
         ));
     }

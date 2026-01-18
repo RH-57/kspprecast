@@ -34,12 +34,6 @@
           <i class="bi bi-pencil-square"></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="post-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('categories.index')}}">
-                <i class="bi bi-circle"></i>
-                <span>Categories</span>
-            </a>
-            </li>
           <li>
             <a href="{{route('products.index')}}">
               <i class="bi bi-circle"></i><span> Create New</span>

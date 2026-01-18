@@ -76,11 +76,6 @@
                             </div>
 
                             <div class="col-md-4">
-                                <strong>Category</strong>
-                                <p>{{ $product->category->name ?? '-' }}</p>
-                            </div>
-
-                            <div class="col-md-4">
                                 <strong>Slug</strong>
                                 <p>{{ $product->slug }}</p>
                             </div>
@@ -145,10 +140,6 @@
                             <div class="col-md-4">
                                 <strong>Meta Title</strong>
                                 <p>{{ $product->meta_title ?? '-' }}</p>
-                            </div>
-                            <div class="col-md-4">
-                                <strong>Meta Keyword</strong>
-                                <p>{{ $product->meta_keyword ?? '-' }}</p>
                             </div>
                             <div class="col-md-4">
                                 <strong>Meta Description</strong>

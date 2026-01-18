@@ -7,7 +7,6 @@
     {{-- ✅ SEO Title dan Meta Description --}}
     <title>Solusi Beton Pracetak Berkualitas untuk Konstruksi Modern & Andal - KSP Precast</title>
     <meta name="description" content="KSP Precast menyediakan produk beton pracetak berkualitas tinggi dengan teknologi pabrik terkontrol. Mitra terpercaya untuk proyek konstruksi cepat, kuat, dan efisien.">
-    <meta name="keywords" content="beton pracetak, precast, KSP Precast, konstruksi, material bangunan, panel beton, balok pracetak, kolom beton">
     <meta name="author" content="KSP Precast">
 
     {{-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) --}}
@@ -145,21 +144,33 @@
             <div class="row g-4">
             @foreach($products as $product)
                 <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 car-card">
+                    <div class="card border-0 shadow-lg rounded-xl overflow-hidden h-100 car-card">
                         <div class="position-relative">
                             <img src="{{ asset('storage/' . $product->cover_image) }}" class="card-img-top" alt="{{ $product->name }}" loading="lazy">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between text-center p-4">
                             <div>
-                            <a href="" class="text-decoration-none"><h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5></a>
+                                <a href="" class="text-decoration-none">
+                                    <h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5>
+                                </a>
                             </div>
                             <div class="mt-auto">
-                            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
-                                target="_blank"
-                                class="btn btn-primary w-100 rounded-pill mb-2">
-                                <i class="bi bi-whatsapp me-2"></i>Beli
-                            </a>
-                            <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
+                                @if($product->lowest_price)
+                                    <p class="text-muted mb-3">
+                                        Mulai dari
+                                        <span class="text-primary">
+                                            Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
+                                        </span>
+                                    </p>
+                                @else
+                                    <p class="text-muted mb-3">Harga sesuai spesifikasi</p>
+                                @endif
+                                <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
+                                    target="_blank"
+                                    class="btn btn-primary w-100 rounded-xl mb-2">
+                                    <i class="bi bi-whatsapp me-2"></i>Beli
+                                </a>
+                                <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
                             </div>
                         </div>
                     </div>

@@ -20,13 +20,9 @@ class ContactController extends Controller
             return MediaSocial::get();
         });
 
-        $productCat = Cache::remember('product_categories', 3600, function () {
-            return ProductCategory::get();
-        });
         return view('web.page.contact-us', compact(
             'contacts',
             'medsos',
-            'productCat',
         ));
     }
 }

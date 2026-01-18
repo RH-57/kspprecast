@@ -72,21 +72,6 @@
                 @csrf
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Category</label>
-                    <div class="col-sm-10">
-                    <select name="product_category_id" class="form-select" required>
-                        <option value="">-- Select Category --</option>
-                        @foreach($categories as $cat)
-                        <option value="{{ $cat->id }}" {{ old('product_category_id') == $cat->id ? 'selected' : '' }}>
-                            {{ $cat->name }}
-                        </option>
-                        @endforeach
-                    </select>
-                    @error('product_category_id') <small class="text-danger">{{ $message }}</small> @enderror
-                    </div>
-                </div>
-
-                <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
                     <input type="text" name="name" value="{{ old('name') }}" class="form-control" required>
@@ -124,6 +109,7 @@
                     <label class="col-sm-2 col-form-label">Cover Image</label>
                     <div class="col-sm-4">
                         <input type="file" name="cover_image" class="form-control" required>
+                        <small class="text-muted">Max size: 4 MB</small>
                     </div>
                 </div>
 
@@ -131,6 +117,7 @@
                     <label for="images" class="col-sm-2 col-form-label">Images</label>
                     <div class="col-sm-10">
                         <input type="file" name="images[]" id="images" class="form-control" multiple accept="image/*">
+                        <small class="text-muted">Max size per image: 4 MB</small>
                         @error('images.*') <small class="text-danger">{{ $message }}</small> @enderror
 
                         <!-- Preview -->
@@ -152,13 +139,6 @@
                   <label class="col-sm-2 col-form-label">Meta Description</label>
                   <div class="col-sm-10">
                     <textarea name="meta_description" class="form-control" rows="2">{{ old('meta_description') }}</textarea>
-                  </div>
-                </div>
-
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Meta Keyword</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="meta_keyword" value="{{ old('meta_keyword') }}" class="form-control">
                   </div>
                 </div>
 
