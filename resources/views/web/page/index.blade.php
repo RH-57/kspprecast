@@ -14,14 +14,14 @@
     <meta property="og:description" content="KSP Precast menyediakan beton pracetak berkualitas tinggi untuk proyek konstruksi cepat, kuat, dan efisien.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('assets/web/img/og-image.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
     <meta property="og:site_name" content="KSP Precast">
 
     {{-- ✅ Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
     <meta name="twitter:description" content="Spesialis beton pracetak berkualitas tinggi dengan efisiensi waktu dan mutu terjamin.">
-    <meta name="twitter:image" content="{{ asset('assets/web/img/og-image.jpg') }}">
+    <meta name="twitter:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
 
     {{-- ✅ Canonical URL --}}
     <link rel="canonical" href="{{ url()->current() }}">

@@ -14,7 +14,7 @@
   {{-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) --}}
   <meta property="og:title" content="Tentang Kami - KSP Precast | Solusi Beton Pracetak Berkualitas">
   <meta property="og:description" content="KSP Precast menghadirkan beton pracetak dengan mutu tinggi, efisiensi waktu, dan solusi konstruksi modern.">
-  <meta property="og:image" content="{{ asset('assets/web/img/about.jpg') }}">
+  <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
   <meta property="og:url" content="{{ url()->current() }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KSP Precast">
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tentang Kami - KSP Precast">
   <meta name="twitter:description" content="KSP Precast menyediakan solusi beton pracetak untuk proyek konstruksi modern.">
-  <meta name="twitter:image" content="{{ asset('assets/web/img/about.jpg') }}">
+  <meta name="twitter:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
 
   {{-- ✅ Canonical URL --}}
   <link rel="canonical" href="{{ url()->current() }}">

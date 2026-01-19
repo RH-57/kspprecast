@@ -3,18 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk Beton Pracetak Berkualitas - KSP Precast</title>
-    <meta name="description" content="Temukan berbagai produk beton pracetak berkualitas tinggi dari KSP Precast untuk mendukung kebutuhan konstruksi Anda.">
-    <meta name="keywords" content="beton pracetak, precast, produk beton, KSP Precast, konstruksi">
+
+    <title>Jual Beton Pracetak (Precast) Berkualitas | Harga Pabrik - KSP Precast</title>
+
+    <meta name="description"
+        content="Jual beton pracetak (precast) berkualitas tinggi langsung dari pabrik. Kuat, presisi, dan siap kirim ke seluruh Indonesia. Hubungi KSP Precast sekarang untuk harga terbaik!">
+
+    <meta name="keywords"
+        content="jual beton pracetak, harga beton precast, precast concrete indonesia, beton pracetak berkualitas, supplier precast, pabrik beton pracetak, KSP Precast">
+
     <meta name="author" content="KSP Precast">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jual Beton Pracetak Berkualitas | KSP Precast">
+    <meta property="og:description"
+        content="Solusi beton pracetak kuat dan presisi untuk proyek konstruksi Anda. Harga kompetitif, produksi pabrik, siap kirim.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jual Beton Pracetak Berkualitas | KSP Precast">
+    <meta name="twitter:description"
+        content="Butuh beton pracetak kuat & presisi? KSP Precast siap supply untuk proyek Anda.">
+    <meta name="twitter:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
 
     {{-- AOS & Bootstrap Icons --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
 
+    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
     <link rel="stylesheet" href="{{asset('build/assets/app-Buv9-TBA.css')}}">
 </head>
+
 <body>
 
 @include('web.components.header')

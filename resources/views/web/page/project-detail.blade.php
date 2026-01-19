@@ -3,17 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ $project->name }} - KSPPrecast</title>
+
+  {{-- ✅ SEO Title --}}
+  <title>{{ $project->name }} | Proyek Beton Pracetak - KSP Precast</title>
+
+  {{-- ✅ SEO Meta Description --}}
+  <meta name="description"
+        content="Proyek {{ $project->name }} merupakan salah satu proyek beton pracetak KSP Precast yang berlokasi di {{ $project->location }} pada tahun {{ $project->year }}. Dikerjakan dengan standar mutu tinggi, presisi, dan tepat waktu.">
+
+  {{-- ✅ SEO Keywords --}}
+  <meta name="keywords"
+        content="proyek beton pracetak, proyek precast {{ $project->location }}, {{ $project->name }}, konstruksi beton precast, proyek infrastruktur beton, KSP Precast">
+
+  <meta name="author" content="KSP Precast">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-image-preview:large">
+
+  {{-- ✅ Canonical --}}
+  <link rel="canonical" href="{{ url()->current() }}">
+
+  {{-- ✅ Open Graph (WhatsApp, Facebook, LinkedIn) --}}
+  <meta property="og:title" content="{{ $project->name }} | Proyek Beton Pracetak KSP Precast">
+  <meta property="og:description"
+        content="Dokumentasi proyek {{ $project->name }} di {{ $project->location }}. Proyek beton pracetak berkualitas tinggi oleh KSP Precast.">
+  <meta property="og:image" content="{{ asset('storage/' . $project->cover_image) }}">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="KSP Precast">
+
+  {{-- ✅ Twitter Card --}}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $project->name }} | Proyek KSP Precast">
+  <meta name="twitter:description"
+        content="Lihat detail proyek beton pracetak {{ $project->name }} yang dikerjakan KSP Precast.">
+  <meta name="twitter:image" content="{{ asset('storage/' . $project->cover_image) }}">
+
+  {{-- ✅ Favicon --}}
+  <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
 
   {{-- AOS & Icons --}}
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  {{-- GLightbox CSS --}}
+  {{-- GLightbox --}}
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
+  {{-- CSS --}}
   <link rel="stylesheet" href="{{asset('build/assets/app-Buv9-TBA.css')}}">
 </head>
+
 <body>
 
 @include('web.components.header')
