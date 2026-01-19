@@ -33,7 +33,7 @@
             </ul>
 
             <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak%20"
-                target="_blank" class="btn btn-contact">Hubungi Kami!</a>
+                target="_blank" class="btn btn-contact">Pesan Sekarang!</a>
         </div>
     </div>
 </nav>
