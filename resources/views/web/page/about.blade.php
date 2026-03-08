@@ -54,7 +54,7 @@
   <section id="about" class="about-section py-5">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Tentang KSPPrecast</h2>
+                <h2 class="fw-bold" style="color:#3d94af;">Tentang KSPPrecast</h2>
             </div>
             <div class="row gy-4">
                 {{-- Gambar kiri --}}
@@ -70,9 +70,9 @@
                         Dengan menggunakan teknologi beton pracetak, kami membantu mempercepat jadwal konstruksi secara signifikan, mengurangi biaya operasional di lapangan, dan memastikan kekuatan struktural yang unggul. Kami siap menjadi mitra andal dalam mewujudkan pembangunan infrastruktur dan gedung yang efisien dan tahan lama.
                     </p>
                     <ul class="list-unstyled mt-3">
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Kualitas beton yang terjamin dan konsisten</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Pemasangan lebih cepat dan efisien waktu</li>
-                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Beragam produk struktural precast (balok, kolom, panel, dll.)</li>
+                        <li><i class="bi bi-check-circle-fill me-2" style="color:#3d94af;"></i> Kualitas beton yang terjamin dan konsisten</li>
+                        <li><i class="bi bi-check-circle-fill me-2" style="color:#3d94af;"></i> Pemasangan lebih cepat dan efisien waktu</li>
+                        <li><i class="bi bi-check-circle-fill me-2" style="color:#3d94af;"></i> Beragam produk struktural precast (balok, kolom, panel, dll.)</li>
                     </ul>
                     <a href="{{route('web-product')}}" class="btn btn-about mt-4">Lihat Produk Kami</a>
                 </div>
@@ -86,7 +86,7 @@
       <div class="row g-4">
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
-            <i class="bi bi-eye-fill fs-1 text-primary mb-3"></i>
+            <i class="bi bi-eye-fill fs-1 mb-3" style="color:#3d94af;"></i>
             <h5 class="fw-bold mb-2">Visi Kami</h5>
             <p class="text-muted mb-0">
               Menjadi perusahaan beton pracetak terdepan yang memberikan solusi konstruksi inovatif dan berkelanjutan.
@@ -95,7 +95,7 @@
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
-            <i class="bi bi-flag-fill fs-1 text-primary mb-3"></i>
+            <i class="bi bi-flag-fill fs-1 mb-3" style="color:#3d94af;"></i>
             <h5 class="fw-bold mb-2">Misi Kami</h5>
             <p class="text-muted mb-0">
               Memberikan produk berkualitas tinggi, layanan profesional, serta membangun kemitraan jangka panjang dengan pelanggan dan mitra bisnis kami.
@@ -119,7 +119,7 @@
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-gear-wide-connected text-primary fs-1"></i>
+                            <i class="bi bi-gear-wide-connected fs-1" style="color:#3d94af;"></i>
                         </div>
                         <h5 class="fw-bold mb-2">Mutu Pabrik Terkontrol</h5>
                         <p class="text-muted">
@@ -132,7 +132,7 @@
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-clock-fill text-primary fs-1"></i>
+                            <i class="bi bi-clock-fill fs-1" style="color:#3d94af;"></i>
                         </div>
                         <h5 class="fw-bold mb-2">Konstruksi Lebih Cepat</h5>
                         <p class="text-muted">
@@ -145,7 +145,7 @@
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="card border-0 shadow-lg rounded-4 h-100 text-center p-4 hover-card">
                         <div class="icon-wrapper mb-3">
-                            <i class="bi bi-house-door-fill text-primary fs-1"></i>
+                            <i class="bi bi-house-door-fill fs-1" style="color:#3d94af;"></i>
                         </div>
                         <h5 class="fw-bold mb-2">Sistem Bangunan Terintegrasi</h5>
                         <p class="text-muted">

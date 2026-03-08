@@ -99,14 +99,14 @@
 
       {{-- Kolom Kanan: Deskripsi --}}
       <div class="col-12 col-lg-6" data-aos="fade-left">
-        <h2 class="fw-bold text-primary mb-3">Tentang Proyek</h2>
+        <h2 class="fw-bold mb-3" style="color:#3d94af;">Tentang Proyek</h2>
         <p class="text-muted">{!! $project->description !!}</p>
 
         <div class="mt-4">
             <div class="d-flex flex-wrap align-items-center gap-4 mb-3">
                 {{-- Tahun --}}
                 <div class="d-flex align-items-center">
-                <i class="bi bi-calendar-event text-primary me-2 fs-5"></i>
+                <i class="bi bi-calendar-event me-2 fs-5" style="color:#3d94af;"></i>
                 <div>
                     <small class="fw-semibold d-block">Tahun</small>
                     <small class="text-muted">{{ $project->year }}</small>
@@ -115,7 +115,7 @@
 
                 {{-- Lokasi --}}
                 <div class="d-flex align-items-center">
-                <i class="bi bi-geo-alt text-primary me-2 fs-5"></i>
+                <i class="bi bi-geo-alt me-2 fs-5" style="color:#3d94af;"></i>
                 <div>
                     <small class="fw-semibold d-block">Lokasi</small>
                     <small class="text-muted">{{ $project->location }}</small>

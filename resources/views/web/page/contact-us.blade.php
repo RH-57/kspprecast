@@ -58,23 +58,23 @@
         <!-- Bagian Kontak -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-info h-100 shadow-sm rounded-4 p-4 bg-white">
-            <h2 class="fw-bold mb-4 text-primary">Hubungi Kami</h2>
+            <h2 class="fw-bold mb-4" style="color:#3d94af;">Hubungi Kami</h2>
             <div class="contact-item mb-4 d-flex align-items-start">
-                <i class="bi bi-geo-alt-fill text-primary fs-3 me-3"></i>
+                <i class="bi bi-geo-alt-fill fs-3 me-3" style="color:#3d94af;"></i>
                 <div>
                 <h6 class="fw-semibold mb-1">Alamat</h6>
                 <p class="text-muted mb-0">{{$contacts->address}}</p>
                 </div>
             </div>
             <div class="contact-item mb-4 d-flex align-items-start">
-                <i class="bi bi-telephone-fill text-primary fs-3 me-3"></i>
+                <i class="bi bi-telephone-fill fs-3 me-3" style="color:#3d94af;"></i>
                 <div>
                 <h6 class="fw-semibold mb-1">Telepon</h6>
                 <p class="text-muted mb-1">+{{$contacts->phone}}</p>
                 </div>
             </div>
             <div class="contact-item d-flex align-items-start">
-                <i class="bi bi-envelope-fill text-primary fs-3 me-3"></i>
+                <i class="bi bi-envelope-fill fs-3 me-3" style="color:#3d94af;"></i>
                 <div>
                 <h6 class="fw-semibold mb-1">Email</h6>
                 <p class="text-muted mb-0">{{$contacts->email}}</p>

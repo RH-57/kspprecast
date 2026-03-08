@@ -55,7 +55,7 @@
     <section class="projects-section py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-primary">Portofolio Proyek</h2>
+                <h2 class="fw-bold" style="color:#3d94af;">Portofolio Proyek</h2>
                 <p class="text-muted">Kami bangga telah dipercaya menjadi bagian dari berbagai pembangunan besar di Indonesia.</p>
             </div>
 
@@ -78,7 +78,7 @@
 
                         <!-- Isi card -->
                         <div class="card-body text-center p-4 pt-3">
-                        <h5 class="fw-bold text-primary mb-2">{{ $project->name }}</h5>
+                        <h5 class="fw-bold mb-2" style="color:#3d94af;">{{ $project->name }}</h5>
                         <p class="text-muted small mb-1"><i class="bi bi-geo-alt-fill me-1"></i>{{ $project->location }}</p>
                         <span class="badge bg-light text-dark mt-2">
                             <i class="bi bi-calendar-event me-1"></i>{{ $project->year }}

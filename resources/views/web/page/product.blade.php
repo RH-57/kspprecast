@@ -70,7 +70,7 @@
                         <div class="card-body d-flex flex-column justify-content-between text-center p-4">
                             <div>
                                 <a href="{{route('web-product-detail', $product->slug)}}" class="text-decoration-none">
-                                    <h5 class="fw-bold text-primary mb-3">{{ $product->name }}</h5>
+                                    <h5 class="fw-bold mb-3" style="color:#3d94af;">{{ $product->name }}</h5>
                                 </a>
 
                             </div>
@@ -78,7 +78,7 @@
                                 @if($product->lowest_price)
                                     <p class="text-muted mb-3">
                                         Mulai dari
-                                        <span class="text-primary">
+                                        <span style="color:#3d94af;">
                                             Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
                                         </span>
                                     </p>
@@ -87,7 +87,7 @@
                                 @endif
                                 <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                                     target="_blank"
-                                    class="btn btn-primary w-100 rounded-xl mb-2">
+                                    class="btn btn-primary w-100 rounded-pill mb-2">
                                     <i class="bi bi-whatsapp me-2"></i>Beli
                                 </a>
                                 <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
