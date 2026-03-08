@@ -10,7 +10,7 @@
 
     {{-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) --}}
     <meta property="og:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
-    <meta property="og:description" content="{{ $product-meta_description ?? 'KSP Precast menyediakan beton pracetak berkualitas tinggi untuk proyek konstruksi cepat, kuat, dan efisien.'}}">
+    <meta property="og:description" content="{{ $product->meta_description ?? 'KSP Precast menyediakan beton pracetak berkualitas tinggi untuk proyek konstruksi cepat, kuat, dan efisien.'}}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
