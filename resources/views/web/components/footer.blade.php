@@ -5,7 +5,11 @@
             <div class="row gy-4">
                 {{-- Kolom 1: Profil Perusahaan --}}
                 <div class="col-md-4">
-                    <h3 class="fw-bold mb-3"><span>KSP</span>Precast</h3>
+                    <h3 class="fw-bold mb-3">
+                        <img src="{{ asset('assets/web/img/logo_footer.png') }}"
+                            alt="KSP Precast"
+                            style="height:60px; width:auto;">
+                    </h3>
                     <p>
                         KSPPrecast adalah mitra terpercaya Anda dalam solusi beton pracetak. Kami menyediakan produk berkualitas tinggi yang menjamin kecepatan, efisiensi, dan kekuatan struktural pada setiap proyek pembangunan Anda.
                     </p>

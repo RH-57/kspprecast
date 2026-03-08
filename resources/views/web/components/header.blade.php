@@ -1,8 +1,10 @@
 {{-- Navbar --}}
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <span>KSP</span>Precast
+        <a class="navbar-brand" href="{{ url('/') }}" style="padding:0;">
+            <img src="{{ asset('assets/web/img/logo.png') }}"
+                alt="KSP Precast"
+                style="height:50px; width:auto; display:block;">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
