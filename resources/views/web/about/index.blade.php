@@ -8,7 +8,7 @@
     {{-- AOS Library --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="{{asset('build/assets/app-Cn8k3xrs.css')}}" rel="stylesheet">
+    <link href="{{asset('build/assets/app-BVhkBIX1.css')}}" rel="stylesheet">
 
 </head>
 <body>
@@ -164,7 +164,6 @@
 @include('web.components.whatsapp')
 @include('web.components.footer')
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init({

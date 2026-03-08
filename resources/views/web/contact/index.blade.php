@@ -6,7 +6,7 @@
     <title>Hubungi Kami | Lira Tour</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="{{asset('build/assets/app-Cn8k3xrs.css')}}" rel="stylesheet">
+    <link href="{{asset('build/assets/app-BVhkBIX1.css')}}" rel="stylesheet">
 </head>
 <body>
 
@@ -94,7 +94,7 @@
 
 @include('web.components.whatsapp')
 @include('web.components.footer')
-<script src="{{asset('build/assets/app-gY57bFlj.js')}}"></script>
+<script src="{{asset('build/assets/app-Bui8vA5R.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

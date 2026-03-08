@@ -39,7 +39,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{asset('build/assets/app-Buv9-TBA.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-BVhkBIX1.css')}}">
 </head>
 
 <body>
@@ -110,7 +110,7 @@
 @include('web.components.whatsapp')
 @include('web.components.footer')
 
-<script src="{{asset('build/assets/app-Cquvts3j.js')}}"></script>
+<script src="{{asset('build/assets/app-Bui8vA5R.js')}}"></script>
 {{-- AOS --}}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({duration: 1000, once: true});</script>

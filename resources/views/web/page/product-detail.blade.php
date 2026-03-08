@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $product->name }} - KSP Precast</title>
+    <title>Jual {{ $product->name }} Berkualitas - KSP Precast</title>
     <meta name="description" content="{{ $product->meta_description ?? 'Temukan detail produk beton pracetak berkualitas dari KSP Precast.' }}">
     <meta name="keywords" content="{{ $product->meta_keyword ?? 'beton pracetak, precast, produk beton, KSP Precast' }}">
     <meta name="author" content="KSP Precast">
 
+    {{-- ✅ Open Graph (Facebook, LinkedIn, WhatsApp) --}}
+    <meta property="og:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
+    <meta property="og:description" content="{{ $product-meta_description ?? 'KSP Precast menyediakan beton pracetak berkualitas tinggi untuk proyek konstruksi cepat, kuat, dan efisien.'}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
+    <meta property="og:site_name" content="KSP Precast">
+
+    {{-- ✅ Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KSP Precast - Partner Tepat untuk Konstruksi Hebat">
+    <meta name="twitter:description" content="Spesialis beton pracetak berkualitas tinggi dengan efisiensi waktu dan mutu terjamin.">
+    <meta name="twitter:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
+
+    {{-- ✅ Canonical URL --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    {{-- ✅ Favicon --}}
+    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
+
     {{-- AOS & Bootstrap Icons --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
 
-    <link rel="stylesheet" href="{{asset('build/assets/app-Buv9-TBA.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-BVhkBIX1.css')}}">
 </head>
 <body>
 
@@ -152,7 +173,7 @@
 @include('web.components.whatsapp')
 @include('web.components.footer')
 
-<script src="{{asset('build/assets/app-Cquvts3j.js')}}"></script>
+<script src="{{asset('build/assets/app-Bui8vA5R.js')}}"></script>
 {{-- AOS --}}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({ duration: 1000, once: true });</script>
@@ -177,7 +198,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+<script>
+const lightbox = GLightbox({
+    selector: '.glightbox'
+});
+</script>
 
 </body>
 </html>
