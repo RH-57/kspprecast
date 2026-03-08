@@ -83,7 +83,7 @@
                     <div class="flex-grow-1 mb-4">
 
                         {{-- Nama Produk --}}
-                        <h2 class="fw-bold text-primary mb-2">{{ $product->name }}</h2>
+                        <h2 class="fw-bold mb-2" style="color:#3d94af;">{{ $product->name }}</h2>
 
                         {{-- Harga Produk --}}
                         @if($product->variants && $product->variants->count() > 0)
@@ -104,7 +104,7 @@
                                     @foreach($product->variants as $variant)
                                         <span class="badge bg-outline-primary text-dark border border-primary me-1 mb-1 variant-badge"
                                             data-price="{{ $variant->price }}"
-                                            style="cursor:pointer;">
+                                            style="cursor:pointer; font-size:14px; padding:8px 14px;">
                                             {{ $variant->name }}
                                         </span>
                                     @endforeach
@@ -141,7 +141,7 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <h3 class="fw-bold text-primary">Produk Lainnya</h3>
+            <h3 class="fw-bold" style="color:#3d94af;">Produk Lainnya</h3>
             <p class="text-muted">Lihat produk beton pracetak lainnya dari kami.</p>
         </div>
 
@@ -152,7 +152,7 @@
                     <img src="{{ asset('storage/' . $item->cover_image) }}" class="card-img-top" alt="{{ $item->name }}">
                     <div class="card-body text-center p-4">
                         <a href="{{ route('web-product-detail', $item->slug) }}" class="text-decoration-none">
-                            <h6 class="fw-bold text-primary">{{ $item->name }}</h6>
+                            <h6 class="fw-bold" style="color:#3d94af;">{{ $item->name }}</h6>
                         </a>
                         <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                             target="_blank"
