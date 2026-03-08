@@ -184,13 +184,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     variantBadges.forEach(badge => {
         badge.addEventListener('click', () => {
-            // Hapus highlight sebelumnya
-            variantBadges.forEach(b => b.classList.remove('bg-primary', 'text-white'));
 
-            // Tambah highlight ke yang dipilih
-            badge.classList.add('bg-primary', 'text-white');
+            // reset semua badge
+            variantBadges.forEach(b => {
+                b.style.backgroundColor = '';
+                b.style.color = '';
+            });
 
-            // Ambil harga dan ubah tampilan angka
+            // badge yang dipilih
+            badge.style.backgroundColor = '#3d94af';
+            badge.style.color = '#fff';
+
+            // update harga
             const price = parseFloat(badge.dataset.price);
             priceEl.textContent = price.toLocaleString('id-ID');
         });
