@@ -44,8 +44,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 hero-text">
-                    <h1>Partner Tepat untuk Konstruksi Hebat</h1>
-                    <p>KSPPrecast adalah Spesialis beton precast berkualitas tinggi dengan harga terjangkau.</p>
+                    <h1>Solusi Beton Pracetak Berkualitas Tinggi</h1>
+                    <p>KSP Precast adalah Spesialis beton precast berkualitas tinggi dengan harga terjangkau.</p>
                     <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak%20"
                                 target="_blank" class="btn-hero"><i class="bi bi-whatsapp me-2"></i>Diskusi Sekarang</a>
                 </div>
@@ -57,7 +57,7 @@
     <section id="about" class="about-section py-5">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold" style="color:#3d94af;">Tentang KSPPrecast</h2>
+                <h2 class="fw-bold" style="color:#3d94af;">Tentang KSP Precast</h2>
             </div>
             <div class="row gy-4">
                 {{-- Gambar kiri --}}
@@ -68,7 +68,7 @@
                 {{-- Deskripsi kanan --}}
                 <div class="col-md-6" data-aos="fade-left">
                     <p class="lead text-muted">
-                        KSPPrecast adalah solusi terdepan Anda dalam penyediaan material konstruksi beton pracetak berkualitas tinggi. Kami berkomitmen untuk merevolusi pembangunan dengan menawarkan produk precast yang diproduksi secara presisi di lingkungan pabrik terkontrol, menjamin mutu yang konsisten untuk setiap proyek Anda.
+                        KSP Precast adalah solusi terdepan Anda dalam penyediaan material konstruksi beton pracetak berkualitas tinggi. Kami berkomitmen untuk merevolusi pembangunan dengan menawarkan produk precast yang diproduksi secara presisi di lingkungan pabrik terkontrol, menjamin mutu yang konsisten untuk setiap proyek Anda.
                         <br><br>
                         Dengan menggunakan teknologi beton pracetak, kami membantu mempercepat jadwal konstruksi secara signifikan, mengurangi biaya operasional di lapangan, dan memastikan kekuatan struktural yang unggul. Kami siap menjadi mitra andal dalam mewujudkan pembangunan infrastruktur dan gedung yang efisien dan tahan lama.
                     </p>
@@ -86,7 +86,7 @@
     <section id="why-us" class="py-5 why-us-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-white">Kenapa Memilih KSPPrecast?</h2>
+                <h2 class="fw-bold text-white">Kenapa Memilih KSP Precast?</h2>
                 <p class="text-white">Kami bukan sekadar penyedia material, tetapi mitra konstruksi yang menjamin proyek Anda dibangun dengan mutu, kecepatan, dan efisiensi yang optimal. Pilih keandalan, pilih KSPPrecast.</p>
             </div>
 
@@ -137,7 +137,7 @@
     <section id="sewa-mobil" class="py-5 sewa-section bg-white">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="fw-bold" style="color:#3d94af;">Produk Unggulan KSPPrecast</h2>
+            <h2 class="fw-bold" style="color:#3d94af;">Produk Unggulan KSP Precast</h2>
             <p class="text-muted">Solusi konstruksi precast berkualitas tinggi untuk pembangunan yang lebih efisien, cepat, dan hemat biaya.</p>
             </div>
 
@@ -168,7 +168,7 @@
                                 <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                                     target="_blank"
                                     class="btn btn-primary w-100 rounded-pill mb-2">
-                                    <i class="bi bi-whatsapp me-2"></i>Beli
+                                    <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
                                 </a>
                                 <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
                             </div>

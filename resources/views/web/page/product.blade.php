@@ -88,7 +88,7 @@
                                 <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                                     target="_blank"
                                     class="btn btn-primary w-100 rounded-pill mb-2">
-                                    <i class="bi bi-whatsapp me-2"></i>Beli
+                                    <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
                                 </a>
                                 <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
                             </div>
