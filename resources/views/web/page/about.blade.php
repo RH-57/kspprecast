@@ -54,7 +54,7 @@
   <section id="about" class="about-section py-5">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold" style="color:#3d94af;">Tentang KSPPrecast</h2>
+                <h2 class="fw-bold" style="color:#3d94af;">Tentang KSP Precast</h2>
             </div>
             <div class="row gy-4">
                 {{-- Gambar kiri --}}
@@ -65,7 +65,7 @@
                 {{-- Deskripsi kanan --}}
                 <div class="col-md-6" data-aos="fade-left">
                     <p class="lead text-muted">
-                        KSPPrecast adalah solusi terdepan Anda dalam penyediaan material konstruksi beton pracetak berkualitas tinggi. Kami berkomitmen untuk merevolusi pembangunan dengan menawarkan produk precast yang diproduksi secara presisi di lingkungan pabrik terkontrol, menjamin mutu yang konsisten untuk setiap proyek Anda.
+                        KSP Precast adalah solusi terdepan Anda dalam penyediaan material konstruksi beton pracetak berkualitas tinggi. Kami berkomitmen untuk merevolusi pembangunan dengan menawarkan produk precast yang diproduksi secara presisi di lingkungan pabrik terkontrol, menjamin mutu yang konsisten untuk setiap proyek Anda.
                         <br><br>
                         Dengan menggunakan teknologi beton pracetak, kami membantu mempercepat jadwal konstruksi secara signifikan, mengurangi biaya operasional di lapangan, dan memastikan kekuatan struktural yang unggul. Kami siap menjadi mitra andal dalam mewujudkan pembangunan infrastruktur dan gedung yang efisien dan tahan lama.
                     </p>
@@ -110,7 +110,7 @@
   <section id="why-us" class="py-5 why-us-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-white">Kenapa Memilih KSPPrecast?</h2>
+                <h2 class="fw-bold text-white">Kenapa Memilih KSP Precast?</h2>
                 <p class="text-white">Kami bukan sekadar penyedia material, tetapi mitra konstruksi yang menjamin proyek Anda dibangun dengan mutu, kecepatan, dan efisiensi yang optimal. Pilih keandalan, pilih KSPPrecast.</p>
             </div>
 
