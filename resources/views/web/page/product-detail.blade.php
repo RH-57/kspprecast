@@ -126,7 +126,7 @@
                     <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                     target="_blank"
                     class="btn btn-primary rounded-pill px-4 py-2 align-self-start">
-                        <i class="bi bi-whatsapp me-2"></i>Hubungi via WhatsApp
+                        <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
                     </a>
                 </div>
             </div>
@@ -149,7 +149,11 @@
             @foreach($relatedProducts as $item)
             <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
-                    <img src="{{ asset('storage/' . $item->cover_image) }}" class="card-img-top" alt="{{ $item->name }}">
+                    <div class="position-relative">
+                        <a href="{{ route('web-product-detail', $item->slug) }}">
+                            <img src="{{ asset('storage/' . $item->cover_image) }}" class="card-img-top" alt="{{ $item->name }}">
+                        </a>
+                    </div>
                     <div class="card-body text-center p-4">
                         <a href="{{ route('web-product-detail', $item->slug) }}" class="text-decoration-none">
                             <h6 class="fw-bold" style="color:#3d94af;">{{ $item->name }}</h6>

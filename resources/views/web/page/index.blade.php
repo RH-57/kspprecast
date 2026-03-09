@@ -146,7 +146,11 @@
                 <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-lg rounded-xl overflow-hidden h-100 car-card">
                         <div class="position-relative">
-                            <img src="{{ asset('storage/' . $product->cover_image) }}" class="card-img-top" alt="{{ $product->name }}" loading="lazy">
+                            <a href="{{ route('web-product-detail', $product->slug) }}">
+                                <img src="{{ asset('storage/' . $product->cover_image) }}"
+                                    class="card-img-top"
+                                    alt="{{ $product->name }}">
+                            </a>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between text-center p-4">
                             <div>
@@ -170,7 +174,7 @@
                                     class="btn btn-primary w-100 rounded-pill mb-2">
                                     <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
                                 </a>
-                                <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
+                                <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none; color:#3d94af;">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
