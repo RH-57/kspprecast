@@ -63,11 +63,11 @@
                 @if($product->images && count($product->images))
                 <div class="row g-3">
                     @foreach($product->images as $img)
-                    <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-3">
                         <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
                             <a href="{{ asset('storage/' . $img->image) }}" class="glightbox" data-gallery="project-gallery">
                             <img src="{{ asset('storage/' . $img->image) }}"
-                                    class="img-fluid w-100 gallery-thumb"
+                                    class="img-fluid w-100"
                                     alt="{{ $product->name }}">
                             </a>
                         </div>
@@ -163,7 +163,7 @@
                             class="btn btn-primary w-100 rounded-pill mb-2">
                             <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
                         </a>
-                        <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none;">Lihat Detail</a>
+                        <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none; color:#3d94af;">Lihat Detail</a>
                     </div>
                 </div>
             </div>

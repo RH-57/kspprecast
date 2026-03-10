@@ -83,11 +83,11 @@
         @if ($project->images->count())
         <div class="row g-3">
           @foreach($project->images as $img)
-          <div class="col-6 col-md-4">
+          <div class="col-6 col-md-3">
             <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
               <a href="{{ asset('storage/' . $img->image) }}" class="glightbox" data-gallery="project-gallery">
                 <img src="{{ asset('storage/' . $img->image) }}"
-                     class="img-fluid w-100 gallery-thumb"
+                     class="img-fluid w-100"
                      alt="{{ $project->name }}">
               </a>
             </div>
