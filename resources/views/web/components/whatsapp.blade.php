@@ -5,7 +5,7 @@
         left: 30px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 10px;
         z-index: 9999;
     }
 
