@@ -79,7 +79,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
+                            <label for="phone" class="form-label">Phone Number 1</label>
                             <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{old('phone', $contacts->phone ?? '')}}" placeholder="+628987654321" required>
                             @error('phone')
                                 <div class="alert alert-danger mt-2">
@@ -88,14 +88,24 @@
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="emai;" class="form-label">Email</label>
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email', $contacts->email ?? '')}}" placeholder="yourmail@yourdomain.com" required>
-                            @error('email')
+                            <label for="phone" class="form-label">Phone Number 2</label>
+                            <input type="text" class="form-control @error('phone_1') is-invalid @enderror" name="phone_1" value="{{old('phone_1', $contacts->phone_1 ?? '')}}" placeholder="628987654321" required>
+                            @error('phone_1')
                                 <div class="alert alert-danger mt-2">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emai;" class="form-label">Email</label>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email', $contacts->email ?? '')}}" placeholder="yourmail@yourdomain.com" required>
+                        @error('email')
+                            <div class="alert alert-danger mt-2">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <div class="mb-3">

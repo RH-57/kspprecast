@@ -13,6 +13,7 @@ class Contact extends Model
         'address',
         'email',
         'phone',
+        'phone_1',
         'maps',
     ];
 }

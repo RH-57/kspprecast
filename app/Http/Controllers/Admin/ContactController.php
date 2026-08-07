@@ -23,6 +23,7 @@ class ContactController
         $request->validate([
             'address'   => 'required|string|max:255',
             'phone'     => 'required|string|max:15',
+            'phone_1'   => 'required|string|max:15',
             'email'     => 'required|string|max:30',
             'maps'      => 'required|string',
         ]);
@@ -30,9 +31,9 @@ class ContactController
         $contacts = Contact::first();
 
         if ($contacts) {
-            $contacts->update($request->only(['address','phone','email', 'maps']));
+            $contacts->update($request->only(['address','phone', 'phone_1', 'email', 'maps']));
         } else {
-            Contact::create($request->only(['address','phone','email', 'maps']));
+            Contact::create($request->only(['address','phone','phone_1', 'email', 'maps']));
         }
 
         Cache::forget('contacts');
