@@ -1,18 +1,5 @@
-import './bootstrap';
-import 'bootstrap';
-import '../scss/app.scss';
+import Alpine from 'alpinejs';
 
-// Animasi saat halaman dimuat
-document.addEventListener('DOMContentLoaded', () => {
-    const fadeEl = document.querySelector('.animate-fade');
-    const slideEl = document.querySelector('.animate-slide');
+window.Alpine = Alpine;
 
-    // Tambahkan delay sedikit biar smooth
-    setTimeout(() => {
-        fadeEl?.classList.add('animate-show');
-    }, 200);
-
-    setTimeout(() => {
-        slideEl?.classList.add('animate-show');
-    }, 400);
-});
+Alpine.start();

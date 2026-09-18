@@ -165,7 +165,7 @@
             </div>
         </div>
         <div class="wa-chat-body">
-            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak"
+            <a href="https://wa.me/{{$contacts?->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak"
                class="wa-contact-item" target="_blank" title="Hubungi Admin 1">
                 <div class="wa-contact-details">
                     <span class="wa-contact-name">Admin 1</span>
@@ -174,7 +174,7 @@
                 <i class="bi bi-whatsapp"></i>
             </a>
 
-            <a href="https://wa.me/{{$contacts->phone_1}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak"
+            <a href="https://wa.me/{{$contacts?->phone_1}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20diskusi%20tentang%20kebutuhan%20produk%20pracetak"
                class="wa-contact-item" target="_blank" title="Hubungi Admin 2">
                 <div class="wa-contact-details">
                     <span class="wa-contact-name">Admin 2</span>

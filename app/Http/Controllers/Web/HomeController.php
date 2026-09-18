@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Models\MediaSocial;
 use App\Models\Product;
-use App\Models\Project;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 
@@ -27,15 +26,10 @@ class HomeController extends Controller
             return Product::with('variants')->get();
         });
 
-        $projects = Cache::remember('projects', 3600, function () {
-            return Project::get();
-        });
-
         return view('web.page.index', compact(
             'contacts',
             'medsos',
             'products',
-            'projects'
         ));
     }
 }
