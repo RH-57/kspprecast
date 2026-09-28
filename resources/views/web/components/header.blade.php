@@ -22,7 +22,6 @@
                     <a href="{{ route('web-product') }}" 
                        class="inline-flex items-center text-sm font-medium transition-colors duration-200 {{ Request::is('product*') ? 'text-blue-600 font-semibold underline underline-offset-8 decoration-2' : 'text-gray-700 hover:text-blue-600' }}">
                         Produk
-                        <x-heroicon-o-chevron-down class="ml-1 w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-transform group-hover:rotate-180" />
                     </a>
                 </div>
 

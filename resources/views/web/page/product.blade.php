@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jual Beton Pracetak (Precast) Berkualitas | Harga Pabrik - KSP Precast</title>
 
+    {{-- SEO Meta Tags --}}
     <meta name="description"
         content="Jual beton pracetak (precast) berkualitas tinggi langsung dari pabrik. Kuat, presisi, dan siap kirim ke seluruh Indonesia. Hubungi KSP Precast sekarang untuk harga terbaik!">
-
     <meta name="keywords"
         content="jual beton pracetak, harga beton precast, precast concrete indonesia, beton pracetak berkualitas, supplier precast, pabrik beton pracetak, KSP Precast">
-
     <meta name="author" content="KSP Precast">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
 
-    <!-- Canonical -->
+    {{-- Canonical --}}
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <!-- Open Graph -->
+    {{-- Open Graph --}}
     <meta property="og:title" content="Jual Beton Pracetak Berkualitas | KSP Precast">
     <meta property="og:description"
         content="Solusi beton pracetak kuat dan presisi untuk proyek konstruksi Anda. Harga kompetitif, produksi pabrik, siap kirim.">
@@ -27,86 +26,120 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
 
-    <!-- Twitter Card -->
+    {{-- Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jual Beton Pracetak Berkualitas | KSP Precast">
     <meta name="twitter:description"
         content="Butuh beton pracetak kuat & presisi? KSP Precast siap supply untuk proyek Anda.">
     <meta name="twitter:image" content="{{ asset('assets/web/img/og-precast.webp') }}">
 
+    {{-- Favicon --}}
+    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
+
     {{-- AOS & Bootstrap Icons --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link rel="icon" href="{{ asset('assets/web/img/favicon.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{asset('build/assets/app-BVhkBIX1.css')}}">
+    {{-- Alpine.js & Tailwind Build --}}
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
 
 @include('web.components.header')
 
-{{-- Hero --}}
-<section class="hero-produk text-center d-flex align-items-center justify-content-center">
-    <div class="overlay"></div>
-    <div class="container position-relative text-white" data-aos="fade-up">
-        <h1 class="fw-bold">Produk Beton Pracetak Kami</h1>
-        <p class="lead">Solusi konstruksi efisien dan tahan lama dengan mutu pabrik terkontrol.</p>
+{{-- Hero Section --}}
+<section class="relative bg-slate-900 text-white pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+    {{-- Background Image Overlay --}}
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/web/img/banner.webp') }}" alt="KSP Precast Banner" class="w-full h-full object-cover opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-4">
+            <i class="bi bi-box-seam"></i> Katalog Produk
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+            Produk Beton Pracetak Kami
+        </h1>
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300">
+            Solusi konstruksi efisien, presisi, dan tahan lama dengan mutu standar pabrik terkontrol.
+        </p>
     </div>
 </section>
 
 {{-- Daftar Produk --}}
-<section class="py-5 bg-light sewa-section">
-    <div class="container">
+<section class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         @if($products->count())
-        <div class="row g-4">
-            @foreach($products as $product)
-                <div class="col-6 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-lg rounded-xl overflow-hidden h-100 car-card">
-                        <div class="position-relative">
-                            <a href="{{ route('web-product-detail', $product->slug) }}">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                @foreach($products as $product)
+                    <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                        
+                        {{-- Cover Image --}}
+                        <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden">
+                            <a href="{{ route('web-product-detail', $product->slug) }}" class="block w-full h-full">
                                 <img src="{{ asset('storage/' . $product->cover_image) }}"
-                                    class="card-img-top"
-                                    alt="{{ $product->name }}">
+                                     alt="{{ $product->name }}"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </a>
                         </div>
-                        <div class="card-body d-flex flex-column justify-content-between text-center p-4">
+
+                        {{-- Card Body --}}
+                        <div class="p-4 sm:p-5 flex flex-col flex-grow justify-between text-center">
                             <div>
-                                <a href="{{route('web-product-detail', $product->slug)}}" class="text-decoration-none">
-                                    <h5 class="fw-bold mb-3" style="color:#3d94af;">{{ $product->name }}</h5>
+                                <a href="{{ route('web-product-detail', $product->slug) }}" class="group-hover:text-sky-600 transition-colors">
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 line-clamp-2 mb-2">
+                                        {{ $product->name }}
+                                    </h3>
+                                </a>
+                            </div>
+
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex flex-col space-y-3">
+                                {{-- Harga --}}
+                                @if($product->lowest_price)
+                                    <div>
+                                        <p class="text-xs text-slate-500">Mulai dari</p>
+                                        <p class="text-sm sm:text-base font-extrabold text-sky-600">
+                                            Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
+                                        </p>
+                                    </div>
+                                @else
+                                    <p class="text-xs font-medium text-slate-500 py-1">Harga sesuai spesifikasi</p>
+                                @endif
+
+                                {{-- Tombol WhatsApp --}}
+                                <a href="https://wa.me/{{ $contacts?->phone }}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20tanya%20mengenai%20produk%20{{ urlencode($product->name) }}."
+                                   target="_blank"
+                                   class="w-full inline-flex items-center justify-center px-3 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium text-xs sm:text-sm shadow-md shadow-emerald-600/20 transition-all duration-200">
+                                    <i class="bi bi-whatsapp me-1.5 text-base"></i> Hubungi Sales
                                 </a>
 
-                            </div>
-                            <div class="mt-auto">
-                                @if($product->lowest_price)
-                                    <p class="text-muted mb-3">
-                                        Mulai dari
-                                        <span style="color:#3d94af;">
-                                            Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
-                                        </span>
-                                    </p>
-                                @else
-                                    <p class="text-muted mb-3">Harga sesuai spesifikasi</p>
-                                @endif
-                                <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
-                                    target="_blank"
-                                    class="btn btn-primary w-100 rounded-pill mb-2">
-                                    <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
+                                {{-- Detail Link --}}
+                                <a href="{{ route('web-product-detail', $product->slug) }}" class="text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors inline-flex items-center justify-center gap-1">
+                                    <span>Lihat Detail</span>
+                                    <i class="bi bi-chevron-right text-xs"></i>
                                 </a>
-                                <a href="{{route('web-product-detail', $product->slug)}}" style="text-decoration: none; color:#3d94af;">Lihat Detail</a>
                             </div>
                         </div>
+
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
         @else
-            <div class="text-center py-5" data-aos="fade-up">
-                <i class="bi bi-box-seam fs-1 text-muted mb-3 d-block"></i>
-                <p class="text-muted mb-0">Belum ada produk di kategori ini.</p>
+            {{-- Empty State --}}
+            <div class="text-center py-16 bg-white rounded-2xl border border-slate-200/80 max-w-lg mx-auto" data-aos="fade-up">
+                <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="bi bi-box-seam"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-1">Belum Ada Produk</h3>
+                <p class="text-slate-500 text-sm">Produk beton pracetak belum tersedia pada kategori ini.</p>
             </div>
         @endif
+
     </div>
 </section>
 
@@ -114,10 +147,12 @@
 @include('web.components.whatsapp')
 @include('web.components.footer')
 
-<script src="{{asset('build/assets/app-Bui8vA5R.js')}}"></script>
+<script src="{{ asset('build/assets/app-Bui8vA5R.js') }}"></script>
 {{-- AOS --}}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({duration: 1000, once: true});</script>
+<script>
+    AOS.init({ duration: 800, once: true });
+</script>
 
 </body>
 </html>

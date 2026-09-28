@@ -40,7 +40,7 @@
     @include('web.components.header')
 
     <!-- Hero Section (Full Background Image) -->
-    <section class="relative bg-slate-900 text-slate-800 min-h-[520px] lg:min-h-[580px] flex flex-col justify-between overflow-hidden">
+    <section class="relative bg-slate-900 text-slate-800 min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden">
         
         <!-- Full Width Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Main Content Container -->
-        <div class="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pt-12 sm:pt-16 lg:pt-20 pb-10 w-full flex-1 flex flex-col justify-between">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
