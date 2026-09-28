@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\ProductVariant;
 use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -37,6 +38,9 @@ class ProductController extends Controller
             'images.*'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'meta_title'          => 'nullable|string|max:150',
             'meta_description'    => 'nullable|string|max:255',
+            'variants.*.sku'      => 'nullable|string|max:100',
+            'variants.*.name'     => 'nullable|string|max:150',
+            'variants.*.price'    => 'nullable|numeric|min:0',
         ]);
 
         $manager = new ImageManager(new Driver());
@@ -104,6 +108,7 @@ class ProductController extends Controller
         if ($request->filled('variants')) {
             foreach (array_values($request->variants) as $variant) {
                 $product->variants()->create([
+                    'sku'   => $variant['sku'] ?? null,
                     'name'  => $variant['name'] ?? '',
                     'price' => $variant['price'] ?? 0,
                 ]);
@@ -154,6 +159,9 @@ class ProductController extends Controller
             'images.*'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'meta_title'          => 'nullable|string|max:150',
             'meta_description'    => 'nullable|string|max:255',
+            'variants.*.sku'      => 'nullable|string|max:100', // <-- UPDATE: Tambah validasi SKU
+            'variants.*.name'     => 'required|string|max:150',
+            'variants.*.price'    => 'required|numeric|min:0',
         ]);
 
         $manager = new ImageManager(new Driver());
@@ -197,20 +205,33 @@ class ProductController extends Controller
             'meta_description'    => $request->meta_description,
         ]);
 
-        // Hapus semua varian lama
-        $product->variants()->delete();
+        // === UPDATE: Simpan / Perbarui Varian (Tanpa Menghapus Semua Record) ===
+        // 1. Ambil semua ID varian baru dari form
+        $inputVariantIds = collect($request->variants)->pluck('id')->filter()->toArray();
 
-        // Simpan varian baru
+        // 2. Hapus varian yang sengaja dihilangkan oleh user di form
+        $product->variants()->whereNotIn('id', $inputVariantIds)->delete();
+
+        // 3. Loop untuk Create / Update Varian
         if ($request->filled('variants')) {
-            foreach (array_values($request->variants) as $variant) {
-                $product->variants()->create([
-                    'name'  => $variant['name'] ?? '',
-                    'price' => $variant['price'] ?? 0,
-                ]);
+            foreach (array_values($request->variants) as $variantData) {
+                if (isset($variantData['id']) && $variantData['id']) {
+                    // Update varian eksisting
+                    ProductVariant::where('id', $variantData['id'])->update([
+                        'sku'   => $variantData['sku'] ?? null,
+                        'name'  => $variantData['name'] ?? '',
+                        'price' => $variantData['price'] ?? 0,
+                    ]);
+                } else {
+                    // Buat varian baru
+                    $product->variants()->create([
+                        'sku'   => $variantData['sku'] ?? null,
+                        'name'  => $variantData['name'] ?? '',
+                        'price' => $variantData['price'] ?? 0,
+                    ]);
+                }
             }
         }
-
-
 
         // === Upload Additional Images ===
         if ($request->hasFile('images')) {
