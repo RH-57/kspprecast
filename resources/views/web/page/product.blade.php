@@ -89,39 +89,40 @@
                         </div>
 
                         {{-- Card Body --}}
-                        <div class="p-4 sm:p-5 flex flex-col flex-grow justify-between text-center">
+                        <div class="p-4 sm:p-5 flex flex-col flex-1 justify-between text-center">
                             <div>
                                 <a href="{{ route('web-product-detail', $product->slug) }}" class="group-hover:text-sky-600 transition-colors">
-                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 line-clamp-2 mb-2">
+                                    <h3 class="text-sm sm:text-base font-bold text-gray-900 line-clamp-2 leading-snug">
                                         {{ $product->name }}
                                     </h3>
                                 </a>
                             </div>
 
-                            <div class="mt-4 pt-3 border-t border-slate-100 flex flex-col space-y-3">
+                            <div class="mt-2 pt-1 border-t border-gray-50 flex flex-col items-center">
                                 {{-- Harga --}}
                                 @if($product->lowest_price)
                                     <div>
                                         <p class="text-xs text-slate-500">Mulai dari</p>
-                                        <p class="text-sm sm:text-base font-extrabold text-sky-600">
+                                        <p class="text-sm sm:text-base font-extrabold text-blue-600 mb-3">
                                             Rp {{ number_format($product->lowest_price, 0, ',', '.') }}
                                         </p>
                                     </div>
                                 @else
-                                    <p class="text-xs font-medium text-slate-500 py-1">Harga sesuai spesifikasi</p>
+                                    <p class="text-xs font-medium text-slate-500 mb-3">Harga sesuai spesifikasi</p>
                                 @endif
 
                                 {{-- Tombol WhatsApp --}}
                                 <a href="https://wa.me/{{ $contacts?->phone }}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20tanya%20mengenai%20produk%20{{ urlencode($product->name) }}."
                                    target="_blank"
-                                   class="w-full inline-flex items-center justify-center px-3 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium text-xs sm:text-sm shadow-md shadow-emerald-600/20 transition-all duration-200">
+                                   class="w-full inline-flex items-center justify-center space-x-1.5 px-3 py-2 sm:py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow transition-all duration-200 mb-2.5">
                                     <i class="bi bi-whatsapp me-1.5 text-base"></i> Hubungi Sales
                                 </a>
 
                                 {{-- Detail Link --}}
-                                <a href="{{ route('web-product-detail', $product->slug) }}" class="text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors inline-flex items-center justify-center gap-1">
+                                <a href="{{ route('web-product-detail', $product->slug) }}" 
+                                class="inline-flex items-center text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors">
                                     <span>Lihat Detail</span>
-                                    <i class="bi bi-chevron-right text-xs"></i>
+                                    <x-heroicon-o-arrow-right class="w-3.5 h-3.5 ml-1" />
                                 </a>
                             </div>
                         </div>

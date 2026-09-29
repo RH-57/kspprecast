@@ -269,7 +269,7 @@
                                 <a href="https://wa.me/{{ $contacts?->phone }}?text=Halo%20KSP%20Precast!%20Saya%20ingin%20beli%20{{ urlencode($product->name) }}."
                                 target="_blank"
                                 class="w-full inline-flex items-center justify-center space-x-1.5 px-3 py-2 sm:py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow transition-all duration-200 mb-2.5">
-                                    <x-heroicon-o-chat-bubble-left-right class="w-4 h-4" />
+                                    <i class="bi bi-whatsapp me-1.5 text-base"></i>
                                     <span>Hubungi Sales</span>
                                 </a>
 
