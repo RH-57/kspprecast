@@ -108,6 +108,7 @@
                                     <thead class="table-light">
                                         <tr>
                                         <th style="width: 10%">#</th>
+                                        <th>SKU</th>
                                         <th>Variant Name</th>
                                         <th>Price (Rp)</th>
                                         </tr>
@@ -116,6 +117,7 @@
                                         @foreach($product->variants as $index => $variant)
                                         <tr>
                                             <td>{{ $index + 1 }}</td>
+                                            <td>{{ $variant->sku }}</td>
                                             <td>{{ $variant->name }}</td>
                                             <td>Rp {{ number_format($variant->price, 0, ',', '.') }}</td>
                                         </tr>

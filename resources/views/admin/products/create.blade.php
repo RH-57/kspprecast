@@ -83,10 +83,13 @@
                     <div class="col-sm-10">
                         <div id="variant-list">
                             <div class="row mb-2 variant-item">
-                                <div class="col-md-5">
+                                <div class="col-md-3">
+                                    <input type="text" name="variants[0][sku]" class="form-control" placeholder="PP-2040" required>
+                                </div>
+                                <div class="col-md-3">
                                     <input type="text" name="variants[0][name]" class="form-control" placeholder="Contoh: Kecil" required>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-3">
                                     <input type="number" name="variants[0][price]" class="form-control" placeholder="Harga (Rp)" required>
                                 </div>
                                 <div class="col-md-2">
@@ -181,10 +184,13 @@
         const row = document.createElement('div');
         row.classList.add('row', 'mb-2', 'variant-item');
         row.innerHTML = `
-            <div class="col-md-5">
+            <div class="col-md-3">
                 <input type="text" name="variants[${variantIndex}][name]" class="form-control" placeholder="Contoh: Medium" required>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-3">
+                <input type="text" name="variants[${variantIndex}][name]" class="form-control" placeholder="Contoh: Medium" required>
+            </div>
+            <div class="col-md-3">
                 <input type="number" name="variants[${variantIndex}][price]" class="form-control" placeholder="Harga (Rp)" required>
             </div>
             <div class="col-md-2">

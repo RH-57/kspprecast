@@ -71,12 +71,17 @@
                     <div id="variant-list">
                         @foreach ($product->variants as $i => $variant)
                         <div class="row mb-2 variant-item">
-                            <div class="col-md-5">
+                            <div class="col-md-3">
+                            <input type="text" name="variants[{{ $i }}][sku]" class="form-control"
+                                    value="{{ old('variants.'.$i.'.sku', $variant->sku) }}"
+                                    placeholder="SKU" required>
+                            </div>
+                            <div class="col-md-3">
                             <input type="text" name="variants[{{ $i }}][name]" class="form-control"
                                     value="{{ old('variants.'.$i.'.name', $variant->name) }}"
                                     placeholder="Contoh: Besar" required>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-3">
                             <input type="number" name="variants[{{ $i }}][price]" class="form-control"
                                     value="{{ old('variants.'.$i.'.price', $variant->price) }}"
                                     placeholder="Harga (Rp)" required>
